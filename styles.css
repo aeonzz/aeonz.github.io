@@ -77,8 +77,8 @@ p{
 
 .hidden{
     opacity: 0;
-    transition: all 0.8s;
-    transform: translateY(30px);
+    transition: all 0.7s;
+    transform: translateY(20px);
 }
 
 .show{
@@ -1619,7 +1619,7 @@ main{
 
     main{
         padding: 0;
-        background-image: url(image/Desktop\ -\ 32.svg);
+        background-image: url(image/Desktop\ -\ 32\ 1.png);
     }
 
     .about-svg-1{
