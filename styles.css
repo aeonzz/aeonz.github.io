@@ -558,6 +558,7 @@ i{
     border-left: solid var(--styles) 1px;
     margin-right: 10px;
 }
+
 .section-2 h3{
     margin: 30px 0 0 30px;
 }
@@ -1192,6 +1193,12 @@ main{
         font-size: 0.7rem;
     }
 
+    .icon-container a:hover{
+        background: transparent;
+        color: var(--text-color);
+        transform: translateY(0);
+    }
+
     header{
         padding: 30px;
     }
@@ -1203,6 +1210,8 @@ main{
     .hamburger{
         display: block;
         z-index: 1;
+        position: absolute;
+        right: 8%;
     }
 
     .hamburger.active .bar:nth-child(2){
@@ -1309,10 +1318,7 @@ main{
     }
 
     .section-1 .section-1-svg-2{
-        top: unset;
-        bottom: 40%;
-        width: 34px;
-        left: 4%;
+        display: none;
     }
     
     .section-1 .section_container{
@@ -1415,6 +1421,10 @@ main{
         font-size: 0.5rem;
     }
 
+    .section-2 h3{
+        margin: 30px 0 0;
+    }
+
     .section-2 .grid-item{
         width: 350px;
         height: 220px;
@@ -1468,6 +1478,11 @@ main{
     .serv-card-label{
         width: 90%;
         padding: 10px 0;
+    }
+
+    .serv-card-label svg{
+        width: 40px;
+        inset: -100% 0 0;
     }
 
     .serv-card-label br{
@@ -1627,9 +1642,8 @@ main{
 
     main{
         padding: 0;
-        background-size: auto;
-        background-position: 50% 25%;
-        background-repeat: no-repeat;
+        background-size: 340%;
+        background-position: top;
     }
 
     .about-svg-1{
@@ -1673,6 +1687,11 @@ main{
         left: 50%;
         transform: translateX(-50%);
         width: 100px;
+        z-index: 1;
+    }
+
+    .about-page-hero .icon-container a:hover{
+        color: var(--bg);
     }
 
     /* services page */
