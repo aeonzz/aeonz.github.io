@@ -1627,6 +1627,7 @@ main{
 
     main{
         padding: 0;
+        background-image: unset;
         background-image: url(image/Desktop\ -\ 32\ 1.png);
     }
 
