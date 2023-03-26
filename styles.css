@@ -1627,7 +1627,9 @@ main{
 
     main{
         padding: 0;
-        background-image: url(image/Desktop\ -\ 32\ 1.png);
+        background-size: auto;
+        background-position: 50% 25%;
+        background-repeat: no-repeat;
     }
 
     .about-svg-1{
