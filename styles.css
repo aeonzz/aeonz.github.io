@@ -1175,7 +1175,7 @@ main{
     html{
         font-size: 16px;
     }
-    
+
     h4{
         font-size: 0.8rem;
     }
@@ -1218,27 +1218,35 @@ main{
     }
 
     .header-con nav ul{
+        background-color: var(--bg);
         position: absolute;
-        top: -200%;
-        height: 150px;
-        width: 25%;
+        opacity: 0;
+        height: 100vh;
+        width: 100%;
         right: 0;
+        top: 0;
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        transition: 0.3s;
+        transition: 0.3s ease-in-out;
     }
 
     nav ul li{
-        margin-top: 5px;
+        margin-top: 20px;
     }
 
     nav ul li a{
-        font-size: 0.5rem;
+        font-size: 1rem;
     }
 
     .header-con nav ul.active{
-        top: 30%;
+        opacity: 1;
+        position: fixed;
+    }
+
+    .hamburger.active{
+        position: fixed;
+        right: 8%;
     }
 
     .hero-section{
