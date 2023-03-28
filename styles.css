@@ -906,7 +906,8 @@ i{
 }
 
 footer {
-    background-color: var(--card-bg);
+    border-top: solid var(--card-bg) 1px;
+    background-color: var(--bg);
     padding: 100px 0;
 }
 
