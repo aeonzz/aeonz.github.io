@@ -930,13 +930,6 @@ footer {
     align-items: center;
 }
 
-footer svg{
-    position: absolute;
-    top: 0;
-    left: 0;
-    transform: translate(0, -150%);
-}
-
 .contact{
     height: 100%;
     width: 170px;
