@@ -906,9 +906,9 @@ i{
 }
 
 footer {
-    border-top: solid var(--card-bg) 1px;
+    border-top: solid #313131 1px;
     background-color: var(--bg);
-    padding: 100px 0;
+    padding: 50px 0;
 }
 
 .footer-wrapper{
@@ -935,16 +935,16 @@ footer {
     width: 170px;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: space-evenly;
 }
 
 footer h4{
-    padding: 0 0 20px 0 ;
+    padding: 0 0 10px 0;
     border-bottom: solid var(--styles) 1px;
 }
 
 footer p {
-    margin: 0;
+    font-size: 0.7rem;
     color: var(--p);
 }
 
@@ -957,7 +957,7 @@ footer .social{
     height: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: space-around;
 }
 
 footer .icon-container{
@@ -966,18 +966,19 @@ footer .icon-container{
     align-items: center;
 }
 
+footer i{
+    font-size: 0.75rem;
+}
+
 footer .nav{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
     width: 100%;
 }
   
 footer nav a {
     color: var(--p);
-    margin-left: 5px;
     text-decoration: none;
-    font-size: 0.75rem;
+    font-size: 0.7rem;
+    margin-left: 7px;
     transition: color 0.3s ease-in-out;
 }
   
@@ -993,7 +994,7 @@ main{
     background-repeat: no-repeat;
     background-position: 50% 30%;
     height: 100vh;
-    padding: 70px 95px;
+    padding: 100px 95px;
     display: flex;
     justify-content: center;
     align-items: center;
