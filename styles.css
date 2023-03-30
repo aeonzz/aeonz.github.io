@@ -762,10 +762,6 @@ i{
     margin-right: 10px;
 }
 
-.serv-card:hover h4::before{
-    border: solid var(--styles) 1px;
-}
-
 .card-desc p{
     color: var(--p);
     font-size: 0.75rem;
@@ -776,6 +772,18 @@ i{
     position: absolute;
     inset: 0;
     margin: auto;
+    opacity: 0.5;
+    transition: 0.3s ease-in-out;
+}
+
+.serv-card:nth-child(n):hover{
+    transition-delay: 100ms !important;
+    transform: translateY(-1px);
+    outline: solid var(--hover) 1px;
+}
+
+.serv-card:hover svg{
+    opacity: 1;
 }
 
 .mob-arrow{
@@ -1016,13 +1024,23 @@ main{
     align-items: center;
     justify-content: space-around;
 }
+
 .about-page-hero img{
     backdrop-filter: blur(5px);
     object-fit: cover;
     border-radius: 50%;
     width: 400px;
     height: 400px;
+    transition: 0.3s ease-in-out;
 }
+
+.about-page-hero img:hover{
+    transform: scale(1.01);
+    outline: dashed var(--bg) 1px;
+    outline-offset: 20px;
+}
+
+
 .about-svg-1{
     position: absolute;
     bottom: -10%;
