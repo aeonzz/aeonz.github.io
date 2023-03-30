@@ -762,6 +762,10 @@ i{
     margin-right: 10px;
 }
 
+.serv-card:hover h4::before{
+    border: solid var(--styles) 1px;
+}
+
 .card-desc p{
     color: var(--p);
     font-size: 0.75rem;
@@ -809,7 +813,7 @@ i{
     background-size: cover;
     background-repeat: no-repeat;
     background-position: bottom;
-}
+}   
 
 .section-4{
     padding: 150px;
@@ -1006,7 +1010,7 @@ main{
     margin-top: 20px;
     position: relative;
     height: auto;
-    width: 90%;
+    width: 1050px;
     display: flex;
     justify-content: center;
     align-items: center;
