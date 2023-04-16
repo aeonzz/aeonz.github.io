@@ -51,42 +51,43 @@ gsap.to(".quote_container", {
   scrollTrigger: {
     ease: "power2",
     trigger: ".introduction",
+    toggle: ".quote_container h3:active",
     start: "top top",
-    end: "bottom -100%",
+    end: "bottom -50%",
     scrub: 1, 
   }, 
 });
 
 gsap.to(".q-1", {
-  y: -100,
+  y: -150,
   scrollTrigger: {
     ease: "power2",
     trigger: ".introduction",
     start: "top top",
-    end: "bottom top",
+    end: "bottom -50%",
     scrub: 1,
   }, 
 });
 
 gsap.to(".q-2", {
-  y: 100,
+  y: 150,
   scrollTrigger: {
     ease: "power2",
     trigger: ".introduction",
     start: "top top",
-    end: "bottom top",
+    end: "bottom -50%",
     scrub: 1,
   }, 
 });
 
 gsap.to(".bg-anim", {
-  y: -50,
+  y: -30,
   scrollTrigger: {
     ease: "power2",
     trigger: ".introduction",
     start: "top top",
     pin: true,
-    end: "bottom -100%",
+    end: "bottom -50%",
     scrub: 1,
   }, 
 });
@@ -133,7 +134,7 @@ gsap.to(".section-2-svg-1:nth-child(1)", {
     ease: "power2",
     start: "top bottom",
     end: "bottom top",
-    scrub: 1,
+    scrub: 2,
   }, 
 });
   
@@ -144,7 +145,7 @@ gsap.to(".section-2-svg-1:nth-child(2)", {
     ease: "power2",
     start: "top bottom",
     end: "bottom top",
-    scrub: 1,
+    scrub: 2,
   }, 
 });
   

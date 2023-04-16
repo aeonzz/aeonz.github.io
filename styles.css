@@ -328,17 +328,17 @@ button:hover a{
 
 .introduction .q-1{
     position: absolute;
-    left: 0;
-    top: 0;
-    opacity: 0.1;
+    left: 3%;
+    top: 100px;
+    opacity: 0.2;
     z-index: 1;
 }
 
 .introduction .q-2{
     position: absolute;
-    right: 0;
-    bottom: 0;
-    opacity: 0.1;
+    right: 3%;
+    bottom: 100px;
+    opacity: 0.2;
     z-index: 1;
 }
 
@@ -606,7 +606,7 @@ i{
 
 .section-2 .flex-container{
     height: auto;
-    gap: 50px;
+    gap: 100px;
     width: 1142px;
     display: flex;
     flex-wrap: wrap;
