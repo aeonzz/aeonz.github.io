@@ -93,7 +93,7 @@ p{
 
 header{
     position: absolute;
-    padding: 40px 95px;
+    padding: 30px 95px;
     top: 0;
     right: 0;
     bottom: auto;
@@ -104,11 +104,7 @@ header{
 .header-con{
     display: flex;
     align-items: center;
-    justify-content: space-between;
-}
-
-.logo{
-    margin-left: 20px;
+    justify-content: center;
 }
 
 .logo svg{
@@ -117,27 +113,37 @@ header{
 
 .logo svg path{
     transition: 0.3s ease-in-out;
-    fill: var(--text-color);
 }
 
 .logo svg:hover path:nth-child(1){
-    transform: translateY(1.65px);
+    transform: translateY(-2px);
 }
 
 .logo svg:hover path:nth-child(2){
+    transform: translate(1px, -8px);
+}
+
+.logo svg:hover path:nth-child(3){
+    transform: translate(-5px, 4px);
+}
+
+.logo svg:hover path:nth-child(4){
     fill: var(--styles);
-    transform: translateY(-1.65px);
+    transform: translateY(2px);
 }
 
 nav ul{
     margin: 0;
+    padding: 0;
+    width: auto;
     list-style-type: none;
     display: flex;
+    align-items: center;
+    gap: 30px;
 }
 
 nav ul li a{
     position: relative;
-    margin-left: 20px;
     font-size: 0.7rem;
     text-decoration: none;
     color: var(--hover);
@@ -152,15 +158,22 @@ nav ul li a{
     border-left: solid var(--styles) 1px;
 }
 
-.header-con nav li a::before{
+.header-con nav li:nth-child(n) a:before{
     cursor: pointer;
     position: absolute;
     content: "";
     bottom: 0;
     height: 0;
-    left: -7px;
     border-left: solid var(--styles) 1px;
     transition: 0.3s ease-in-out;
+}
+
+.header-con nav li:nth-child(1) a:before{
+    left: -7px;
+}
+
+.header-con nav li:nth-child(3) a:before{
+    right: -7px;
 }
 
 .header-con nav a:hover{
@@ -169,21 +182,6 @@ nav ul li a{
 
 .header-con nav li a:hover::before{
     height: 100%;
-}
-
-.hamburger{
-    cursor: pointer;
-    display: none;
-}
-
-.bar{
-    display: block;
-    width: 20px;
-    height: 2px;
-    margin: 3px auto;
-    -webkit-transition: 0.3s ease-in-out;
-    transition: 0.3s ease-in-out;
-    background-color: var(--p);
 }
 
 .hero-section{
@@ -324,7 +322,29 @@ button:hover a{
 }
 
 .introduction{
-    padding: 300px 0;
+    height: 100vh;
+    position: relative;
+}
+
+.introduction .q-1{
+    position: absolute;
+    left: 0;
+    top: 0;
+    opacity: 0.1;
+    z-index: 1;
+}
+
+.introduction .q-2{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    opacity: 0.1;
+    z-index: 1;
+}
+
+.bg-anim{
+    width: 100%;
+    height: inherit;
     background-image: url(image/bg-2.jpg);
     background-size: cover;
     background-repeat: no-repeat;
@@ -332,22 +352,6 @@ button:hover a{
     display: flex;
     align-items: center;
     justify-content: center;
-    position: relative;
-}
-
-.introduction .q-1{
-    position: absolute;
-    left: 0;
-    top: -150px;
-    opacity: 0.1;
-}
-
-.introduction .q-2{
-    position: absolute;
-    right: 0;
-    bottom: -150px;
-    opacity: 0.1;
-    z-index: 1;
 }
 
 .quote_container{
@@ -357,7 +361,7 @@ button:hover a{
 
 .section-1{
     height: auto;
-    padding: 200px 0 100px;
+    padding: 250px 0 10px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -374,7 +378,7 @@ button:hover a{
 .section-1 .section-1-svg-2{
     position: absolute;
     right: 38%;
-    top: 10%;
+    top: 15%;
     opacity: 0.7;
     z-index: 2;
 }
@@ -418,8 +422,7 @@ button:hover a{
 }
 
 .section-1 .section_container{
-    border: solid var(--card-bg) 1px;
-    backdrop-filter: blur(1.5px);
+    backdrop-filter: blur(2px);
     position: relative;
     height: 550px;
     width: 1142px;
@@ -432,8 +435,22 @@ button:hover a{
 .section-1 .section_content-1{
     width: 500px;
     height: auto;
-    border-left: solid var(--styles) 1px;
-    padding-left: 40px;
+}
+
+.section-1 .id-con{
+    display: flex;
+    height: auto;
+    width: fit-content;
+    gap: 20px;
+}
+
+.section-1 .id-con p{
+    width: fit-content;
+    font-size: 0.7rem;
+    padding: 10px 25px;
+    color: var(--styles);
+    background-color: var(--card-bg);
+    border-radius: 5px;
 }
 
 .section_content-1 span{
@@ -442,7 +459,6 @@ button:hover a{
 
 .section_content-1 h2{
     margin: 0;
-    stroke: var(--styles);
 }
 
 .section_content-1 p{
@@ -532,7 +548,7 @@ i{
     align-items: center;
     justify-content: center;
     height: auto;
-    padding: 100px 0 50px;
+    padding: 100px 0 150px;
     position: relative;
    /* background: rgb(0,0,0);
     background: linear-gradi    ent(350deg, var(--p) 70%, var(--styles3) 70%);*/
@@ -540,15 +556,21 @@ i{
 
 .section-2 .grid-label{
     border-top: solid var(--card-bg) 1px;
-    padding: 50px 0 30px;
+    padding: 70px 0 30px;
     width: 1142px;
     position: relative;
     text-align: center;
 }
 
-.section-2-svg-1{
+.section-2-svg-1:nth-child(1){
     position: absolute;
-    top: 280px;
+    top: 160px;
+    opacity: 0.2;
+}
+
+.section-2-svg-1:nth-child(2){
+    position: absolute;
+    top: 330px;
     opacity: 0.2;
 }
 
@@ -717,7 +739,7 @@ i{
 
 .section-3-svg-1{
     position: absolute;
-    top: 215px;
+    top: 260px;
     opacity: 0.2;
 }
 
@@ -725,7 +747,7 @@ i{
     text-align: center;
     width: 1142px;
     border-top: solid var(--card-bg) 1px;
-    padding: 50px 0 30px;
+    padding: 100px 0 30px;
     position: relative;
 }
 
@@ -1211,58 +1233,11 @@ main{
     }
 
     .logo svg{ 
-        width: 1rem;
-    }
-
-    .hamburger{
-        display: block;
-        z-index: 1;
-        position: absolute;
-        right: 8%;
-    }
-
-    .hamburger.active .bar:nth-child(2){
-        opacity: 0;
-    }
-
-    .hamburger.active .bar:nth-child(1){
-        transform: translateY(5px) rotate(45deg);
-    }
-
-    .hamburger.active .bar:nth-child(3){
-        transform: translateY(-5px) rotate(-45deg);
-    }
-
-    .header-con nav ul{
-        background-color: var(--bg);
-        position: absolute;
-        display: none;
-        height: 100vh;
-        width: 100%;
-        right: 0;
-        top: 0;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        transition: all 0.3s ease-in-out;
-    }
-
-    nav ul li{
-        margin-top: 20px;
+        width: 2rem;
     }
 
     nav ul li a{
-        font-size: 1rem;
-    }
-
-    .header-con nav ul.active{
-        display: flex;
-        position: fixed;
-    }
-
-    .hamburger.active{
-        position: fixed;
-        right: 8%;
+        font-size: 0.7rem;
     }
 
     .hero-section{
@@ -1298,9 +1273,13 @@ main{
     }
 
     .introduction{
+        height: 500px;
+        overflow-y: visible;
+    }
+
+    .bg-anim{
+        background-position: center;
         background-size: cover;
-        padding: 100px 0;
-        background-position: bottom;
     }
 
     .introduction .q-1,
@@ -1353,10 +1332,13 @@ main{
         font-size: 3rem;
     }
 
+    .section-1 .id-con{
+        justify-content: center;
+        width: auto;
+    }
+
     .section-1 button{
-        position: absolute;
-        bottom: -310px;
-        left: 38%;
+        display: none;
     }
 
     .section-1 .pfp-card{
@@ -1401,9 +1383,14 @@ main{
         display: none;
     }
 
-    .section-2-svg-1{
-        top: 50px;
-        width: 800px;
+    .section-2-svg-1:nth-child(1){
+        width: 2000px;
+        top: 100px;
+    }
+
+    .section-2-svg-1:nth-child(2){
+        width: 1900px;
+        top: 190px;
     }
 
     .section-2-svg-2,

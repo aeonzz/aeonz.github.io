@@ -16,17 +16,176 @@ const hiddenElement = document.querySelectorAll('.Hfade')
  hiddenElement.forEach((el) => observer.observe(el));
 
 
+    
+gsap.registerPlugin(ScrollTrigger);
 
-const burger = document.querySelector(".hamburger");
-const menu = document.querySelector(".header-con nav ul");
+gsap.to("#hoodie", {
+  y: -10,
+  ease: "power2",
+  scrollTrigger: {
+    trigger: ".hero-section",
+    start: "30% top",
+    end: "bottom center",
+    scrub: true,
+  },
+}), 
 
-burger.addEventListener("click", () => {
-  burger.classList.toggle("active");
-  menu.classList.toggle("active");
-})
+ScrollTrigger.create({
+  trigger: ".hero-section",
+  start: "30% top",
+  end: "bottom center",
+  onLeave: () => {
+    const element = document.querySelector("#hoodie");
+    element.style.transition = "";
+    element.style.transitionDelay = "";
+  },
+  onEnter: () => {
+    const element = document.querySelector("#hoodie");
+    element.style.transition = "";
+    element.style.transitionDelay = "";
+  }
+});
+
+gsap.to(".quote_container", {
+  y: 50,
+  scrollTrigger: {
+    ease: "power2",
+    trigger: ".introduction",
+    start: "top top",
+    end: "bottom -100%",
+    scrub: 1, 
+  }, 
+});
+
+gsap.to(".q-1", {
+  y: -100,
+  scrollTrigger: {
+    ease: "power2",
+    trigger: ".introduction",
+    start: "top top",
+    end: "bottom top",
+    scrub: 1,
+  }, 
+});
+
+gsap.to(".q-2", {
+  y: 100,
+  scrollTrigger: {
+    ease: "power2",
+    trigger: ".introduction",
+    start: "top top",
+    end: "bottom top",
+    scrub: 1,
+  }, 
+});
+
+gsap.to(".bg-anim", {
+  y: -50,
+  scrollTrigger: {
+    ease: "power2",
+    trigger: ".introduction",
+    start: "top top",
+    pin: true,
+    end: "bottom -100%",
+    scrub: 1,
+  }, 
+});
+
+gsap.to(".section_content-1", {
+  y: -30,
+  ease: "power2",
+  scrollTrigger: {
+    trigger: ".section-1",
+    start: "top top",
+    end: "bottom center",
+    scrub: 1,
+    ease: "power2",
+  }, 
+});
+
+gsap.to(".section-1-svg-2", {
+  y: -50,
+  ease: "power2",
+  scrollTrigger: {
+    trigger: ".section-1",
+    start: "top top",
+    end: "bottom center",
+    scrub: 1,
+    ease: "power2",
+  }, 
+});
+  
+gsap.to(".section-1-svg-1", {
+  y: 40,
+  scrollTrigger: {
+    trigger: ".section-1",
+    start: "top top",
+    end: "bottom center",
+    scrub: 1,
+    ease: "power2",
+  }, 
+});
+  
+gsap.to(".section-2-svg-1:nth-child(1)", {
+  xPercent: -3,
+  scrollTrigger: {
+    trigger: ".section-2",
+    ease: "power2",
+    start: "top bottom",
+    end: "bottom top",
+    scrub: 1,
+  }, 
+});
+  
+gsap.to(".section-2-svg-1:nth-child(2)", {
+  xPercent: 5,
+  scrollTrigger: {
+    trigger: ".section-2",
+    ease: "power2",
+    start: "top bottom",
+    end: "bottom top",
+    scrub: 1,
+  }, 
+});
+  
+gsap.to(".section-3-svg-1", {
+  y: 30,
+  scrollTrigger: {
+    trigger: ".section-3",
+    start: "top top",
+    end: "bottom center",
+    scrub: 1,
+    ease: "power2",
+  }, 
+});
+  
+gsap.to(".services-container", {
+  y: -30,
+  scrollTrigger: {
+    trigger: ".section-3",
+    start: "top top",
+    end: "bottom center",
+    scrub: 1,
+    ease: "power2",
+  }, 
+});
+  
+gsap.to(".about-svg-1", {
+  y: 30,
+  scrollTrigger: {
+    trigger: ".about-page-hero",
+    start: "top top",
+    end: "bottom center",
+    scrub: 1,
+    ease: "power2",
+  }, 
+});
 
 
-document.querySelectorAll(".link").forEach(n => n.addEventListener("click", () => {
-  burger.classList.remove("active")
-  menu.classList.remove("active")
-}))
+if (window.matchMedia("(max-width: 768px)").matches) {
+  // Disable ScrollTriggers on mobile devices
+} else {
+  // Initialize ScrollTriggers for desktop devices
+  gsap.registerPlugin(ScrollTrigger);
+  // Other ScrollTrigger initialization code
+}
