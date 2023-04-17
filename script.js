@@ -103,10 +103,9 @@ gsap.to(".section_content-1", {
     ease: "power2",
   }, 
 });
-
-gsap.to(".section-1-svg-2", {
-  y: -50,
-  ease: "power2",
+  
+gsap.to(".section-1-svg-1", {
+  y: 30,
   scrollTrigger: {
     trigger: ".section-1",
     start: "top top",
@@ -115,9 +114,10 @@ gsap.to(".section-1-svg-2", {
     ease: "power2",
   }, 
 });
-  
-gsap.to(".section-1-svg-1", {
-  y: 40,
+
+gsap.to(".section-1-svg-2", {
+  y: -20,
+  ease: "power2",
   scrollTrigger: {
     trigger: ".section-1",
     start: "top top",
@@ -181,12 +181,14 @@ gsap.to(".about-svg-1", {
     ease: "power2",
   }, 
 });
-
-
-if (window.matchMedia("(max-width: 768px)").matches) {
-  // Disable ScrollTriggers on mobile devices
-} else {
-  // Initialize ScrollTriggers for desktop devices
-  gsap.registerPlugin(ScrollTrigger);
-  // Other ScrollTrigger initialization code
-}
+  
+gsap.to(".con-container", {
+  y: 250,
+  scrollTrigger: {
+    trigger: ".section-4",
+    start: "top bottom",
+    scrub: 1,
+    ease: "power2",
+    markers: true,
+  }, 
+});
