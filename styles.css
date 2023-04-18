@@ -575,28 +575,28 @@ i{
 
 .section-2-svg-2{
     position: absolute;
-    right: -50px;
-    bottom: -70px;
+    right: -70px;
+    bottom: -120px;
     transition: 0.3s ease-in-out;
 }
 
 .section-2-svg-3{
     position: absolute;
-    bottom: 10%;
-    right: 3%;
+    bottom: 0;
+    right: 0;
     transition: 0.3s ease-in-out;
 }
 
 .section-2-svg-4{
     position: absolute;
-    top: 40%;
-    right: 30%;
+    bottom: 10%;
+    left: -5%;
     transition: 0.3s ease-in-out;
 }
 
 .section-2 .flex-container{
     height: auto;
-    gap: 50px;
+    gap: 100px;
     width: 1142px;
     display: flex;
     flex-wrap: wrap;
@@ -648,15 +648,21 @@ i{
 }
 
 .flex-con-left-con{
-    width: 450px;
+    width: auto;
     height: auto;
-    display: flex;
-    justify-content: flex-start;
+    padding: 60px 0 60px 60px;
+}
+
+.order:nth-child(1){
+    order: 1;
+}
+
+.order:nth-child(2){
+    order: -1;
 }
 
 .left-con{
     height: auto;
-    padding: 60px;
     width: auto;
     overflow: hidden;
 }
@@ -677,44 +683,46 @@ i{
     background-color: var(--bg2);
 }
 
-.section-2 .flex-item img{
-    position: absolute;
-    right: 50px;
-    width: 550px;
+.flex-con-right-con{
+    width: auto;
     height: auto;
-    bottom: 30px;
-    object-fit: cover;
-    transition: 0.3s ease-in-out;
+    position: relative;
+    display: flex;
+    overflow: visible;
 }
 
-.section-2 .flex-item:hover img{    
-    bottom: 60px;
+.flex-con-right-con img{
+    right: 50px;
+    width: 700px;
+    height: auto;
+    overflow: visible;
+    object-fit: cover;
+    transition: 0.5s ease-in-out;
+}
+
+.flex-con-right-con:hover img{    
+    margin-bottom: 60px;
     animation: Move 10s infinite ease-in-out;
 }
 
-.section-2 .flex-item:hover .section-2-svg-2{
-    bottom: -90px;
+.flex-con-right-con:hover .section-2-svg-2{
+    bottom: -140px;
 }
 
-.section-2 .flex-item:hover .section-2-svg-3{
-    right: -5%;
-    bottom: 5%;
-}
-
-.section-2 .flex-item:hover .section-2-svg-4{
-    top: 35%;
-    right: 40%;
-}
-
-.section-2 .flex-item:hover .section-2-svg-{
-    right: 2%;
+.flex-con-right-con:hover .section-2-svg-3{
+    right: -10%;
     bottom: 10%;
+}
+
+.flex-con-right-con:hover .section-2-svg-4{
+    bottom: 20%;
+    left: -10%;
 }
 
 .section-3{
     height: auto;
     display: flex;
-    padding: 0 0 50px;
+    padding: 0 0 100px;
     align-items: center;
     flex-direction: column;
     justify-content: center;
@@ -724,16 +732,29 @@ i{
 
 .section-3-svg-1{
     position: absolute;
-    top: 250px;
+    top: 300px;
     opacity: 0.2;
+}
+
+.section-3-svg-2{
+    position: absolute;
+    right: 10%;
+    top: 15%;
+    animation: rtate 10s ease-in-out infinite;
+}
+
+.section-3-svg-3{
+    position: absolute;
+    left: 10%;
+    bottom: 0;
+    animation: rtate 10s ease-in-out reverse infinite;
 }
 
 .serv-card-label{
     width: 1142px;
     border-top: solid var(--card-bg) 1px;
-    padding: 150px 0 30px;
+    padding: 200px 0 80px;
     position: relative;
-    margin-bottom: 50px;
 }
 
 .services-container{
@@ -813,26 +834,9 @@ footer{
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-direction: column;
     position: relative;
     overflow: hidden;
     background-color: var(--text-color);
-}
-
-footer .foter-svg-1{
-    position: absolute;
-    left: 10%;
-    top: 15%;
-    opacity: 0.2;
-    animation: rtate 10s ease-in-out infinite;
-}
-
-footer .foter-svg-2{
-    position: absolute;
-    right: 10%;
-    bottom: 15%;
-    opacity: 0.2;
-    animation: rtate 10s ease-in-out reverse infinite;
 }
 
 .con-container{
@@ -855,7 +859,7 @@ footer .left-col{
 footer h2{
     text-align: start;
     color: var(--bg);
-    font-size: 4rem;
+    font-size: 3.5rem;
 }
 
 footer .icon-container{
@@ -884,6 +888,7 @@ footer .email{
 }
 
 footer .right-col{
+    height: auto;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -902,7 +907,7 @@ footer nav{
 footer nav a {
     color: var(--bg);
     text-decoration: none;
-    font-size: 1rem;
+    font-size: 0.7rem;
     transition: color 0.3s ease-in-out;
 }
   
@@ -1177,9 +1182,14 @@ main{
         background-size: cover;
     }
 
-    .introduction .q-1,
+    .introduction .q-1{
+        width: 200px;
+        top: -50px;
+    }
+
     .introduction .q-2{
         width: 200px;
+        bottom: -50px;
     }
 
     .quote_container{
@@ -1302,16 +1312,18 @@ main{
         gap: 20px;
     }
 
+    .order:nth-child(n){
+        order: 1;
+    }
+
     .section-2 .flex-item{
         width: 370px;
         height: 300px;
-        backdrop-filter: blur(0);
-        border: none;
         flex-direction: column;
     }
     
     .section-2 .flex-item img{
-        width: 300px;
+        width: 350px;
     }
     
     .section-2 .flex-item:hover{
@@ -1332,7 +1344,7 @@ main{
     }
 
     .flex-con-left-con{
-        justify-content: flex-start;
+        padding: 0;
     }
 
     .left-con p{
@@ -1359,6 +1371,11 @@ main{
         right: 15%;
         bottom: 250px;
         transform: rotate(-90deg);
+    }
+
+    .section-3-svg-2,
+    .section-3-svg-3{
+        display: none;
     }
 
     .serv-card-label{
@@ -1435,93 +1452,34 @@ main{
         opacity: 0.1;
     }
 
-    .section-4{
-        padding: 30px 0 50px;
-    }
-
-    .section-4 .section-4-svg-1{
-        width: 25px;
-        top: 0;
-    }
-
-    .section-4 .section-4-svg-2{
-        width: 25px;
-        bottom: 10%;
-    }
-
-    .section-4 .section-4-svg-3{
-        width: 80px;
-        top: -15%;
-        right: -5%;
-    }
-
-    .section-4 .section-4-svg-4{
-        width: 80px;
-        bottom: -20%;
-        left: -5%;
+    footer{
+        padding: 0 50px;
     }
 
     .con-container{
-        width: 100%;
+        width: auto;
         height: 200px;
     }
 
-    .section-4 h2{
-        font-size: 1.5rem;
-        margin-bottom: 10px;
+    footer h2{
+        font-size: 2rem;
     }
 
-    .section-4 .icon-container{
+    footer .icon-container{
         width: 100px;
     }
 
-    .email h5{
-        margin: 20px auto 0 auto;
-        font-size: 0.7rem;
-    }
-
-    .email a{
+    .email a,
+    footer nav a {
         font-size: 0.5rem;
-    }
-
-    footer {
-        padding: 50px 0;
-    }
-
-    .footer-wrapper{
-        width: 70%;
-    }
-
-    .footer-container{
-        height: 70px;
-        justify-content: space-around;
-    }
-
-    footer h4{
-        padding: 0 0 10px 0 ;
-        font-size: 0.6rem;
-    }
-
-    footer svg{
-        display: none;
-    }
-
-    .contact{
-        height: 100%;
-        width: 100px;
-    }
-
-    footer p {
-        font-size: 0.5rem;
-        margin: 0;
-    }
-
-    footer .social{
-        width: 100px;
     }
 
     footer nav{
-        display: none;
+        margin-top: 40px;
+    }
+
+    footer .right-col p {
+        font-size: 0.5rem;
     }
 
     /* about page */
