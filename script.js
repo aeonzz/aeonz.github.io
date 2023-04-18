@@ -21,7 +21,6 @@ gsap.registerPlugin(ScrollTrigger);
 
 gsap.to("#hoodie", {
   y: -10,
-  ease: "power2",
   scrollTrigger: {
     trigger: ".hero-section",
     start: "30% top",
@@ -49,7 +48,6 @@ ScrollTrigger.create({
 gsap.to(".quote_container", {
   y: 50,
   scrollTrigger: {
-    ease: "power2",
     trigger: ".introduction",
     toggle: ".quote_container h3:active",
     start: "top top",
@@ -61,7 +59,6 @@ gsap.to(".quote_container", {
 gsap.to(".q-1", {
   y: -150,
   scrollTrigger: {
-    ease: "power2",
     trigger: ".introduction",
     start: "top top",
     end: "bottom -50%",
@@ -72,7 +69,6 @@ gsap.to(".q-1", {
 gsap.to(".q-2", {
   y: 150,
   scrollTrigger: {
-    ease: "power2",
     trigger: ".introduction",
     start: "top top",
     end: "bottom -50%",
@@ -83,7 +79,6 @@ gsap.to(".q-2", {
 gsap.to(".bg-anim", {
   y: -30,
   scrollTrigger: {
-    ease: "power2",
     trigger: ".introduction",
     start: "top top",
     pin: true,
@@ -98,9 +93,7 @@ gsap.to(".section_content-1", {
   scrollTrigger: {
     trigger: ".section-1",
     start: "top top",
-    end: "bottom center",
     scrub: 1,
-    ease: "power2",
   }, 
 });
   
@@ -111,7 +104,6 @@ gsap.to(".section-1-svg-1", {
     start: "top top",
     end: "bottom center",
     scrub: 1,
-    ease: "power2",
   }, 
 });
 
@@ -123,7 +115,6 @@ gsap.to(".section-1-svg-2", {
     start: "top top",
     end: "bottom center",
     scrub: 1,
-    ease: "power2",
   }, 
 });
   
@@ -131,7 +122,6 @@ gsap.to(".section-2-svg-1:nth-child(1)", {
   xPercent: -3,
   scrollTrigger: {
     trigger: ".section-2",
-    ease: "power2",
     start: "top bottom",
     end: "bottom top",
     scrub: 2,
@@ -142,10 +132,29 @@ gsap.to(".section-2-svg-1:nth-child(2)", {
   xPercent: 5,
   scrollTrigger: {
     trigger: ".section-2",
-    ease: "power2",
     start: "top bottom",
     end: "bottom top",
     scrub: 2,
+  }, 
+});
+  
+gsap.to(".section-2", {
+  y: 100,
+  scrollTrigger: {
+    trigger: ".section-2",
+    start: "bottom bottom",
+    end: "bottom top",
+    scrub: 0.3,
+  }, 
+});
+  
+gsap.to(".section-3", {
+  yPercent: -10,
+  scrollTrigger: {
+    trigger: ".section-3",
+    start: "top bottom",
+    end: "bottom bottom",
+    scrub: 0.3,
   }, 
 });
   
@@ -153,10 +162,9 @@ gsap.to(".section-3-svg-1", {
   y: 30,
   scrollTrigger: {
     trigger: ".section-3",
-    start: "top top",
+    start: "top center",
     end: "bottom center",
     scrub: 1,
-    ease: "power2",
   }, 
 });
   
@@ -164,13 +172,22 @@ gsap.to(".services-container", {
   y: -30,
   scrollTrigger: {
     trigger: ".section-3",
-    start: "top top",
+    start: "top center",
     end: "bottom center",
     scrub: 1,
-    ease: "power2",
   }, 
 });
-  
+
+gsap.from(".con-container", {
+  y: -150,
+  scrollTrigger: {
+    trigger: "footer",
+    start: "top bottom",
+    end: "bottom bottom",
+    scrub: 0.5,
+  }, 
+});
+
 gsap.to(".about-svg-1", {
   y: 30,
   scrollTrigger: {
@@ -178,17 +195,6 @@ gsap.to(".about-svg-1", {
     start: "top top",
     end: "bottom center",
     scrub: 1,
-    ease: "power2",
   }, 
 });
   
-gsap.to(".con-container", {
-  y: 250,
-  scrollTrigger: {
-    trigger: ".section-4",
-    start: "top bottom",
-    scrub: 1,
-    ease: "power2",
-    markers: true,
-  }, 
-});

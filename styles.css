@@ -547,6 +547,7 @@ i{
     align-items: center;
     justify-content: center;
     height: auto;
+    background-color: var(--bg);
     padding: 100px 0;
     position: relative;
    /* background: rgb(0,0,0);
@@ -713,25 +714,26 @@ i{
 .section-3{
     height: auto;
     display: flex;
+    padding: 0 0 50px;
     align-items: center;
     flex-direction: column;
     justify-content: center;
-    padding: 100px 0 200px;
     position: relative;
+    background-color: var(--bg);
 }
 
 .section-3-svg-1{
     position: absolute;
-    top: 300px;
+    top: 250px;
     opacity: 0.2;
 }
 
 .serv-card-label{
     width: 1142px;
     border-top: solid var(--card-bg) 1px;
-    padding: 100px 0 30px;
+    padding: 150px 0 30px;
     position: relative;
-    margin-bottom: 20px;
+    margin-bottom: 50px;
 }
 
 .services-container{
@@ -806,10 +808,10 @@ i{
     position: relative;
 }
 
-.section-4{
-    padding: 0 0 200px;
+footer{
+    padding: 50px;
     display: flex;
-    justify-content: flex-start;
+    justify-content: center;
     align-items: center;
     flex-direction: column;
     position: relative;
@@ -817,59 +819,61 @@ i{
     background-color: var(--text-color);
 }
 
-.section-4 .section-4-svg-1{
+footer .foter-svg-1{
     position: absolute;
-    left: 20%;
-    top: 18%;
+    left: 10%;
+    top: 15%;
+    opacity: 0.2;
     animation: rtate 10s ease-in-out infinite;
 }
 
-.section-4 .section-4-svg-2{
+footer .foter-svg-2{
     position: absolute;
-    right: 20%;
-    bottom: 18%;
+    right: 10%;
+    bottom: 15%;
+    opacity: 0.2;
     animation: rtate 10s ease-in-out reverse infinite;
 }
 
 .con-container{
     width: 1000px;
     height: 400px;
-    display: flex;
-    margin-top: -50px;
-    align-items: center;
     color: var(--text-color);
+    display: flex;
+    justify-content: space-between;
     position: relative;
 }
 
-.section-4 h2{
-    align-self: flex-start;
-    justify-self: flex-start;
-    color: var(--bg);
-    font-size: 4rem;
-    margin: 0;
+footer .left-col{
+    height: auto;
+    width: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
-.section-4 .icon-container{
+footer h2{
+    text-align: start;
+    color: var(--bg);
+    font-size: 4rem;
+}
+
+footer .icon-container{
     display: flex;
     justify-content: space-between;
     width: 140px;
 }
 
-.section-4 .icon-container a{
+footer .icon-container a{
     color: var(--bg);
 }
 
-.section-4 .email{
-    text-align: center;
-}
-
-.email h5{
-    margin: 30px auto 5px auto;
-    font-size: 0.875rem;
-    color: var(--bg);
+footer .email{
+    text-align: start;
 }
 
 .email a{
+    font-size: 0.9rem;
     margin: 0;
     color: var(--bg);
     transition: color 0.3s ease-in-out;
@@ -879,84 +883,38 @@ i{
     color: var(--styles);
 }
 
-footer {
-    background-color: var(--card-bg);
-    padding: 50px 0;
-}
-
-.footer-wrapper{
-    width: 450px;
-    height: auto;
-    margin: 0 auto;
+footer .right-col{
     display: flex;
-    justify-content: center;
     flex-direction: column;
-    align-items: center;
-    position: relative;
-}
-  
-.footer-container{
-    width: 100%;
-    height: 120px;
-    display: flex;
     justify-content: space-between;
-    align-items: center;
 }
 
-.contact{
-    height: 100%;
-    width: 170px;
+footer nav{
+    margin-top: 80px;
+    width: fit-content;
+    height: auto;
+    align-self: flex-end;
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
-}
-
-footer h4{
-    padding: 0 0 10px 0;
-    border-bottom: solid var(--styles) 1px;
-}
-
-footer p {
-    font-size: 0.7rem;
-    color: var(--p);
-}
-
-footer a:hover{
-    color: var(--p);
-}
-
-footer .social{
-    width: 170px;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-}
-
-footer .icon-container{
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-}
-
-footer i{
-    font-size: 0.75rem;
-}
-
-footer .nav{
-    width: 100%;
+    gap: 20px;
 }
   
 footer nav a {
-    color: var(--p);
+    color: var(--bg);
     text-decoration: none;
-    font-size: 0.7rem;
-    margin-left: 7px;
+    font-size: 1rem;
     transition: color 0.3s ease-in-out;
 }
   
 footer nav a:hover {
-    color: var(--hover);
+    color: var(--styles);
+}
+
+footer .right-col p {
+    font-size: 0.9rem;
+    font-weight: bold;
+    color: var(--bg);
+    margin: 0;
 }
 
 /*about page*/
