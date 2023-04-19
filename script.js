@@ -167,7 +167,7 @@ if (window.matchMedia("(max-width: 430px)").matches) {
       trigger: ".section-3",
       start: "top bottom",
       end: "bottom bottom",
-      scrub: 0.1,
+      scrub: true,
     }, 
   });
     
