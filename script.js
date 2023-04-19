@@ -157,7 +157,7 @@ if (window.matchMedia("(max-width: 430px)").matches) {
       trigger: ".section-2",
       start: "bottom bottom",
       end: "bottom top",
-      scrub: 0.3,
+      scrub: 0.1,
     }, 
   });
     
@@ -197,7 +197,7 @@ if (window.matchMedia("(max-width: 430px)").matches) {
       trigger: "footer",
       start: "top bottom",
       end: "bottom bottom",
-      scrub: 0.3,
+      scrub: 0.1,
     }, 
   });
   
