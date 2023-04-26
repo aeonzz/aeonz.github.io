@@ -1,3 +1,16 @@
+
+const lenis = new Lenis({
+  duration: 1.2,
+  easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t))
+});
+
+function raf(time) {
+  lenis.raf(time);
+  requestAnimationFrame(raf);
+}
+
+requestAnimationFrame(raf);
+
 const observer = new IntersectionObserver((entries) => {
   entries.forEach((entry) => {
     console.log(entry)
@@ -49,14 +62,25 @@ if (window.matchMedia("(max-width: 430px)").matches) {
     }
   });
   
+  gsap.from(".introduction", {
+    opacity: 0,
+    scrollTrigger: {
+      trigger: ".introduction",
+      start: "top 40%",
+      end: "center center",
+      scrub: 1, 
+      ease: "none",
+    }, 
+  });
+  
   gsap.to(".quote_container", {
     y: 50,
     scrollTrigger: {
       trigger: ".introduction",
-      toggle: ".quote_container h3:active",
       start: "top top",
       end: "bottom -50%",
       scrub: 1, 
+      ease: "none",
     }, 
   });
   
@@ -86,7 +110,17 @@ if (window.matchMedia("(max-width: 430px)").matches) {
       trigger: ".introduction",
       start: "top top",
       pin: true,
+      scrub: 1,
       end: "bottom -50%",
+    }, 
+  });
+  
+  gsap.to(".section_container", {
+    opacity: 0,
+    scrollTrigger: {
+      trigger: ".section-1",
+      start: "bottom 40%",
+      end: "bottom top",
       scrub: 1,
     }, 
   });
@@ -95,29 +129,39 @@ if (window.matchMedia("(max-width: 430px)").matches) {
     y: -30,
     scrollTrigger: {
       trigger: ".section-1",
-      start: "top top",
-      end: "center center",
+      start: "top center",
+      end: "bottom top",
       scrub: 1,
     }, 
   });
     
   gsap.to(".section-1-svg-1", {
-    y: 30,
+    xPercent: -150,
     scrollTrigger: {
       trigger: ".section-1",
-      start: "top top",
-      end: "center center",
+      start: "top center",
+      end: "bottom center",
       scrub: 1,
     }, 
   });
   
+  gsap.to(".pfp-card", {
+    y: -50,
+    scrollTrigger: {
+      trigger: ".section-1",
+      start: "center top",
+      end: "bottom top",
+      scrub: 1,
+    },
+  });
+  
   gsap.to(".section-1-svg-2", {
-    y: -20,
+    y: -40,
     scrollTrigger: {
       trigger: ".section-1",
       start: "top top",
       end: "bottom center",
-      scrub: 1,
+      scrub: 2,
     }, 
   });
     
@@ -151,6 +195,7 @@ if (window.matchMedia("(max-width: 430px)").matches) {
     }, 
   });
     
+<<<<<<< Updated upstream
   gsap.to(".section-2", {
     y: 150,
     scrollTrigger: {
@@ -171,12 +216,14 @@ if (window.matchMedia("(max-width: 430px)").matches) {
     }, 
   });
     
+=======
+>>>>>>> Stashed changes
   gsap.to(".section-3-svg-1", {
     y: 30,
     scrollTrigger: {
       trigger: ".section-3",
       start: "top center",
-      end: "center center",
+      end: "bottom center",
       scrub: 1,
     }, 
   });
@@ -186,18 +233,18 @@ if (window.matchMedia("(max-width: 430px)").matches) {
     scrollTrigger: {
       trigger: ".section-3",
       start: "top center",
-      end: "center center",
+      end: "bottom center",
       scrub: 1,
     }, 
   });
   
   gsap.from(".con-container", {
-    y: -130,
+    y: -140,
     scrollTrigger: {
       trigger: "footer",
       start: "top bottom",
       end: "bottom bottom",
-      scrub: 0.1,
+      scrub: 0.3,
     }, 
   });
   
@@ -212,4 +259,3 @@ if (window.matchMedia("(max-width: 430px)").matches) {
   });
     
 }
-    

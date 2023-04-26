@@ -9,10 +9,29 @@
 }
 
 html{
-    overscroll-behavior: none;
-    scroll-behavior: smooth;
+    scroll-behavior: auto;
     font-size: 16px;
 }
+
+::-webkit-scrollbar {
+    width: 3px;
+    height: auto;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--bg);
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--hover);
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+  
 
 body{
     background-color: var(--bg);
@@ -22,18 +41,6 @@ body{
     box-sizing: border-box;
 }
 
-body::-webkit-scrollbar {
-    width: 0.2em;
-    background-color: var(--bg);
-}
-  
-body::-webkit-scrollbar-thumb {
-    background-color: var(--p);
-}
-  
-body::-webkit-scrollbar-thumb:hover {
-    background-color: var(--hover);
-}
 
 h1{
     margin: 0;
@@ -54,14 +61,13 @@ h3{
 }
 
 h4{
-    margin: 0;
     color: var(--text-color);
     cursor: default;
-    font-size: 0.875rem;
+    font-size: 1.2rem;
 }
 
 p{
-    font-size: 0.875rem;
+    font-size: 0.9rem;
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     color: var(--p);
     line-height: 1.3;
@@ -189,12 +195,11 @@ nav ul li a{
     background-image: url(image/Desktop\ -\ 7.png);
     background-size: cover;
     background-repeat: no-repeat;
-    background-position: bottom;
-    height: 110vh;
+    height: 100vh;
     width: auto;
     padding: 0 95px;
     display: flex;
-    align-items: center;
+    align-items: flex-end;
     justify-content: center;
 }
 
@@ -251,51 +256,6 @@ nav ul li a{
         transform: translateY(0);
     }
 }
-
-button{
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background: var(--bg2);
-    box-shadow: 0px 6px 24px 0px rgba(0, 0, 0, 0.2);
-    overflow: hidden;
-    border: none;
-}
-   
-button::after{
-    content: " ";
-    width: 0%;
-    height: 100%;
-    background: var(--styles);
-    position: absolute;
-    transition: all 0.4s ease-in-out;
-    right: 0;
-}
-   
-button:hover::after{
-    right: auto;
-    left: 0;
-    width: 100%;
-}
-   
-button a{
-    text-align: center;
-    text-decoration: none;
-    width: 100%;
-    padding: 8px 15px;
-    color: var(--p);
-    font-size: 0.75rem;
-    font-weight: 700;
-    z-index: 20;
-    transition: all 0.3s ease-in-out;
-    font-family:'Poppins' ,sans-serif;
-}
-   
-button:hover a{
-    color: var(--bg);
-    animation: scaleUp 0.3s ease-in-out;
-}
    
 @keyframes scaleUp{
     0% {
@@ -344,6 +304,7 @@ button:hover a{
 }
 
 .bg-anim{
+    position: absolute;
     width: 100%;
     height: inherit;
     background-image: url(image/bg-2.jpg);
@@ -362,7 +323,7 @@ button:hover a{
 
 .section-1{
     height: auto;
-    padding: 250px 0 10px;
+    padding: 250px 0 100px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -371,9 +332,9 @@ button:hover a{
 
 .section-1 .section-1-svg-1{
     position: absolute;
-    left: -5%;
-    top: 20%;
-    opacity: 0.2;
+    right: -200vw;
+    top: 25%;
+    opacity: 0.3;
 }
 
 .section-1 .section-1-svg-2{
@@ -460,14 +421,56 @@ button:hover a{
 .section_content-1 h2{
     margin: 0;
 }
-
-.section_content-1 p{
-    margin: 0 0 20px;
+  
+button{
+    padding: 0;
+    margin-top: 30px;
+    background: none;
+    position: relative;
+    display: flex;
+    border: none;
+    align-items: center;
+}
+  
+button a{
+    margin: 0;
+    position: relative;
+    font-size: 0.8rem;
+    font-family:'Poppins' ,sans-serif;
+    text-decoration: none;
+    color: var(--text-color);
+    transition: 0.3s ease-in-out;
 }
 
-.section-1 button{
-    margin-left: 0;
-    margin-bottom: 20px;
+button::after {
+    position: absolute;
+    content: "";
+    width: 0;
+    left: 0;
+    bottom: -5px;
+    border-bottom: solid var(--styles) 1px;
+    transition: 0.3s ease-in-out;
+}
+  
+button a:hover{
+    color: var(--p);
+    cursor: pointer;
+}
+  
+button:hover::after{
+    width: 75%;
+}
+  
+button svg{
+    color: var(--text-color);
+    transition: 0.2s;
+    position: relative;
+    margin: 0 5px -3.7px;
+    width: 15px;
+}
+  
+button:hover svg{
+    transform: translateX(4px);
 }
 
 .section-1 .pfp-card{
@@ -479,7 +482,6 @@ button:hover a{
     -webkit-box-shadow: 0px 0px 50px 7px rgba(0,0,0,0.76);
     -moz-box-shadow: 0px 0px 50px 7px rgba(0,0,0,0.76);
     border-radius: 2px;
-    transition: 0.2s ease-in-out;
     overflow: hidden;
 }
 
@@ -490,10 +492,6 @@ button:hover a{
     border-radius: 2px;
     object-position: bottom;
     transition: 0.4s ease-in-out;
-}
-
-.section-1 .pfp-card:hover{
-    transform: scale(1.01);
 }
 
 .section-1 .pfp-card:hover img{ 
@@ -549,7 +547,7 @@ i{
     justify-content: center;
     height: auto;
     background-color: var(--bg);
-    padding: 100px 0;
+    padding: 100px 0 150px;
     position: relative;
    /* background: rgb(0,0,0);
     background: linear-gradi    ent(350deg, var(--p) 70%, var(--styles3) 70%);*/
@@ -565,18 +563,18 @@ i{
 .section-2-svg-1:nth-child(1){
     position: absolute;
     top: 200px;
-    opacity: 0.2;
+    opacity: 0.3;
 }
 
 .section-2-svg-1:nth-child(2){
     position: absolute;
     top: 370px;
-    opacity: 0.2;
+    opacity: 0.3;
 }
 
 .section-2-svg-2{
     position: absolute;
-    right: -70px;
+    right: -75px;
     bottom: -120px;
     transition: 0.3s ease-in-out;
 }
@@ -698,11 +696,15 @@ i{
     height: auto;
     overflow: visible;
     object-fit: cover;
+<<<<<<< Updated upstream:styles.css
     transition: 0.3s ease-in-out;
+=======
+    transition: 0.3s ease-in-out 0.3s;
+>>>>>>> Stashed changes:main.css
 }
 
 .flex-con-right-con:hover img{    
-    margin-bottom: 60px;
+    margin-bottom: 50px;
     animation: Move 10s infinite ease-in-out;
 }
 
@@ -723,7 +725,7 @@ i{
 .section-3{
     height: auto;
     display: flex;
-    padding: 0 0 100px;
+    padding: 0 0 200px;
     align-items: center;
     flex-direction: column;
     justify-content: center;
@@ -733,8 +735,8 @@ i{
 
 .section-3-svg-1{
     position: absolute;
-    top: 300px;
-    opacity: 0.2;
+    top: 200px;
+    opacity: 0.3;
 }
 
 .section-3-svg-2{
@@ -747,14 +749,14 @@ i{
 .section-3-svg-3{
     position: absolute;
     left: 10%;
-    bottom: 0;
+    bottom: 15%;
     animation: rtate 10s ease-in-out reverse infinite;
 }
 
 .serv-card-label{
     width: 1142px;
     border-top: solid var(--card-bg) 1px;
-    padding: 200px 0 80px;
+    padding: 100px 0;
     position: relative;
 }
 
@@ -764,28 +766,34 @@ i{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-auto-rows: 120px;
-    column-gap: 30px;
 }
 
 .section-3 a{
     text-decoration: none;
 }
 
-.section-3 button{
-    position: absolute;
-    left: 35px;
-    bottom: 35px;
+.serv-card{
+    grid-row: span 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
 }
 
-.section-3 button a{
-    font-size: 0.7rem;
+.serv-card h4{
+    margin: 0 0 40px;
 }
 
 .card-desc{
-    margin: 0 auto 15px;
+    margin: 0 auto;
     width: 80%;
-    height: 130px;
+    height: auto;
     padding: 20px;
+}
+
+.card-desc button{
+    position: absolute;
+    bottom: 20px;
 }
 
 .card-desc h4::before,
@@ -796,38 +804,8 @@ i{
     margin-right: 15px;
 }
 
-.card-desc p{
-    color: var(--p);
-    font-size: 0.75rem;
-    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-}
-
-.services-container svg:not(.mob-arrow){
-    position: absolute;
-    inset: 0 0 90px;
-    margin: auto;
-    opacity: 0.4;
-    transition: 0.3s ease-in-out;
-}
-
-.serv-card:nth-child(n):hover{
-    transition-delay: 100ms !important;
-    outline: solid #ffffff3a 1px;
-}
-
-.serv-card:hover svg{
-    opacity: 1;
-}
-
 .mob-arrow{
     display: none;
-}
-
-.serv-card{
-    grid-row: span 2;
-    display: flex;
-    align-items: center;
-    position: relative;
 }
 
 footer{
