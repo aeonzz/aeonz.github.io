@@ -195,29 +195,6 @@ if (window.matchMedia("(max-width: 430px)").matches) {
     }, 
   });
     
-<<<<<<< Updated upstream
-  gsap.to(".section-2", {
-    y: 150,
-    scrollTrigger: {
-      trigger: ".section-2",
-      start: "bottom bottom",
-      end: "bottom top",
-      scrub: 0.1,
-    }, 
-  });
-    
-  gsap.to(".section-3", {
-    yPercent: -10,
-    scrollTrigger: {
-      trigger: ".section-3",
-      start: "top bottom",
-      end: "bottom bottom",
-      scrub: true,
-    }, 
-  });
-    
-=======
->>>>>>> Stashed changes
   gsap.to(".section-3-svg-1", {
     y: 30,
     scrollTrigger: {

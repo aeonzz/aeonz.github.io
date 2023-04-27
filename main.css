@@ -696,11 +696,7 @@ i{
     height: auto;
     overflow: visible;
     object-fit: cover;
-<<<<<<< Updated upstream:styles.css
-    transition: 0.3s ease-in-out;
-=======
     transition: 0.3s ease-in-out 0.3s;
->>>>>>> Stashed changes:main.css
 }
 
 .flex-con-right-con:hover img{    
