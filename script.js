@@ -1,6 +1,6 @@
 
 const lenis = new Lenis({
-  duration: 1.2,
+  duration: 1.5,
   easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t))
 });
 
@@ -36,39 +36,13 @@ if (window.matchMedia("(max-width: 430px)").matches) {
 }else{
   gsap.registerPlugin(ScrollTrigger);
   
-  gsap.to("#hoodie", {
-    y: -10,
-    scrollTrigger: {
-      trigger: ".hero-section",
-      start: "30% top",
-      end: "bottom center",
-      scrub: true,
-    },
-  }), 
-  
-  ScrollTrigger.create({
-    trigger: ".hero-section",
-    start: "30% top",
-    end: "bottom center",
-    onLeave: () => {
-      const element = document.querySelector("#hoodie");
-      element.style.transition = "";
-      element.style.transitionDelay = "";
-    },
-    onEnter: () => {
-      const element = document.querySelector("#hoodie");
-      element.style.transition = "";
-      element.style.transitionDelay = "";
-    }
-  });
-  
   gsap.from(".introduction", {
     opacity: 0,
     scrollTrigger: {
       trigger: ".introduction",
       start: "top 40%",
       end: "center center",
-      scrub: 1, 
+      scrub: 0.5,
       ease: "none",
     }, 
   });
@@ -79,7 +53,7 @@ if (window.matchMedia("(max-width: 430px)").matches) {
       trigger: ".introduction",
       start: "top top",
       end: "bottom -50%",
-      scrub: 1, 
+      scrub: 0.5,
       ease: "none",
     }, 
   });
@@ -90,7 +64,7 @@ if (window.matchMedia("(max-width: 430px)").matches) {
       trigger: ".introduction",
       start: "top top",
       end: "bottom -50%",
-      scrub: 1,
+      scrub: 0.5,
     }, 
   });
   
@@ -100,7 +74,7 @@ if (window.matchMedia("(max-width: 430px)").matches) {
       trigger: ".introduction",
       start: "top top",
       end: "bottom -50%",
-      scrub: 1,
+      scrub: 0.5,
     }, 
   });
   
@@ -110,7 +84,7 @@ if (window.matchMedia("(max-width: 430px)").matches) {
       trigger: ".introduction",
       start: "top top",
       pin: true,
-      scrub: 1,
+      scrub: 0.5,
       end: "bottom -50%",
     }, 
   });
@@ -119,29 +93,29 @@ if (window.matchMedia("(max-width: 430px)").matches) {
     opacity: 0,
     scrollTrigger: {
       trigger: ".section-1",
-      start: "bottom 40%",
-      end: "bottom top",
-      scrub: 1,
-    }, 
-  });
-  
-  gsap.to(".section_content-1", {
-    y: -30,
-    scrollTrigger: {
-      trigger: ".section-1",
-      start: "top center",
-      end: "bottom top",
-      scrub: 1,
+      start: "90% center",
+      end: "90% 20%",
+      scrub: 0.5,
     }, 
   });
     
   gsap.to(".section-1-svg-1", {
-    xPercent: -150,
+    x: "60vw",
     scrollTrigger: {
       trigger: ".section-1",
-      start: "top center",
-      end: "bottom center",
-      scrub: 1,
+      start: "top bottom",
+      end: "bottom top",
+      scrub: 0.5,
+    }, 
+  });
+    
+  gsap.to(".section-1-svg-2", {
+    x: "-60vw",
+    scrollTrigger: {
+      trigger: ".section-1",
+      start: "top bottom",
+      end: "bottom top",
+      scrub: 0.5,
     }, 
   });
   
@@ -151,27 +125,27 @@ if (window.matchMedia("(max-width: 430px)").matches) {
       trigger: ".section-1",
       start: "center top",
       end: "bottom top",
-      scrub: 1,
+      scrub: 0.5,
     },
   });
   
-  gsap.to(".section-1-svg-2", {
-    y: -40,
+  gsap.to(".section-1-svg-3", {
+    y: -100,
     scrollTrigger: {
       trigger: ".section-1",
       start: "top top",
       end: "bottom center",
-      scrub: 2,
+      scrub: 0.5,
     }, 
   });
     
   gsap.to(".section-2-svg-1:nth-child(1)", {
-    xPercent: -3,
+    xPercent: -5,
     scrollTrigger: {
       trigger: ".section-2",
       start: "top bottom",
       end: "bottom top",
-      scrub: 2,
+      scrub: 0.5,
     }, 
   });
     
@@ -181,7 +155,7 @@ if (window.matchMedia("(max-width: 430px)").matches) {
       trigger: ".section-2",
       start: "top bottom",
       end: "bottom top",
-      scrub: 2,
+      scrub: 0.5,
     }, 
   });
     
@@ -191,27 +165,7 @@ if (window.matchMedia("(max-width: 430px)").matches) {
       trigger: ".section-2",
       start: "center center",
       end: "bottom top",
-      scrub: 1,
-    }, 
-  });
-    
-  gsap.to(".section-3-svg-1", {
-    y: 30,
-    scrollTrigger: {
-      trigger: ".section-3",
-      start: "top center",
-      end: "bottom center",
-      scrub: 1,
-    }, 
-  });
-    
-  gsap.to(".services-container", {
-    y: -30,
-    scrollTrigger: {
-      trigger: ".section-3",
-      start: "top center",
-      end: "bottom center",
-      scrub: 1,
+      scrub: 0.5,
     }, 
   });
   
@@ -221,7 +175,7 @@ if (window.matchMedia("(max-width: 430px)").matches) {
       trigger: "footer",
       start: "top bottom",
       end: "bottom bottom",
-      scrub: 0.3,
+      scrub: 0.5,
     }, 
   });
   

@@ -67,7 +67,7 @@ h4{
 }
 
 p{
-    font-size: 0.9rem;
+    font-size: 1rem;
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     color: var(--p);
     line-height: 1.3;
@@ -111,7 +111,7 @@ header{
 .header-con{
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
 }
 
 .logo svg{
@@ -160,35 +160,24 @@ nav ul li a{
 .header-con .page-indicator:before{
     position: absolute;
     content: "";
-    bottom: 0;
-    height: 100%;
-    border-left: solid var(--styles) 1px;
+    width: 100%;
+    left: 0;
+    bottom: -5px;
+    border-bottom: solid var(--styles) 1px;
 }
 
-.header-con nav li:nth-child(n) a:before{
-    cursor: pointer;
+.header-con nav li a::before{
     position: absolute;
     content: "";
-    bottom: 0;
-    height: 0;
-    border-left: solid var(--styles) 1px;
-    transition: 0.3s ease-in-out;
+    width: 0;
+    left: 0;
+    bottom: -5px;
+    border-bottom: solid var(--styles) 1px;
+    transition: 0.6s cubic-bezier(0.85, 0, 0.15, 1);
 }
-
-.header-con nav li:nth-child(1) a:before{
-    left: -7px;
-}
-
-.header-con nav li:nth-child(3) a:before{
-    right: -7px;
-}
-
-.header-con nav a:hover{
-    color: var(--p);
-}
-
+  
 .header-con nav li a:hover::before{
-    height: 100%;
+    width: 100%;
 }
 
 .hero-section{
@@ -271,17 +260,6 @@ nav ul li a{
     }
 }
 
-.arrowdown{
-    position: absolute;
-    bottom: 0;
-    opacity: 0.1;
-    animation: arrowMove 3s ease-in-out infinite;
-}
-
-.arrowdown path:hover{
-    fill: var(--hover);
-}
-
 .introduction{
     height: 100vh;
     position: relative;
@@ -290,7 +268,7 @@ nav ul li a{
 .introduction .q-1{
     position: absolute;
     left: 3%;
-    top: 100px;
+    top: 150px;
     opacity: 0.2;
     z-index: 1;
 }
@@ -298,7 +276,7 @@ nav ul li a{
 .introduction .q-2{
     position: absolute;
     right: 3%;
-    bottom: 100px;
+    bottom: 150px;
     opacity: 0.2;
     z-index: 1;
 }
@@ -322,8 +300,11 @@ nav ul li a{
 }
 
 .section-1{
+    background-image: url(image/Desktop\ -\ 11.png);
+    background-size: cover;
+    background-repeat: no-repeat;
     height: auto;
-    padding: 250px 0 100px;
+    padding: 300px 0 250px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -332,15 +313,24 @@ nav ul li a{
 
 .section-1 .section-1-svg-1{
     position: absolute;
-    right: -200vw;
-    top: 25%;
+    left: -50vw;
+    top: 20%;
     opacity: 0.3;
 }
 
 .section-1 .section-1-svg-2{
     position: absolute;
-    right: 38%;
-    top: 15%;
+    right: -50vw;
+    bottom: 18%;
+    opacity: 0.3;
+    z-index: 5;
+    pointer-events: none;
+}
+
+.section-1 .section-1-svg-3{
+    position: absolute;
+    right: 40%;
+    top: 20%;
     opacity: 0.7;
     z-index: 2;
 }
@@ -360,7 +350,7 @@ nav ul li a{
     }
 }
 
-.section-1 .section-1-svg-3{
+.section-1 .section-1-svg-4{
     position: absolute;
     right: 10%;
     top: 10%;
@@ -368,7 +358,7 @@ nav ul li a{
     animation: rtate 10s ease-in-out infinite;
 }
 
-.section-1 .section-1-svg-4{
+.section-1 .section-1-svg-5{
     position: absolute;
     left: 10%;
     bottom: 10%;
@@ -376,7 +366,7 @@ nav ul li a{
     animation: rtate 10s ease-in-out infinite reverse;
 }
 
-.section-1 .section-1-svg-5{
+.section-1 .section-1-svg-6{
     position: absolute;
     top: -150px;
     left: -150px;
@@ -385,17 +375,18 @@ nav ul li a{
 
 .section-1 .section_container{
     position: relative;
-    height: 550px;
+    height: auto;
     width: 1142px;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
     gap: 50px;
 }
 
 .section-1 .section_content-1{
-    width: 500px;
+    width: 450px;
     height: auto;
+    align-self: flex-start;
 }
 
 .section-1 .id-con{
@@ -439,7 +430,7 @@ button a{
     font-family:'Poppins' ,sans-serif;
     text-decoration: none;
     color: var(--text-color);
-    transition: 0.3s ease-in-out;
+    transition: 0.6s cubic-bezier(0.85, 0, 0.15, 1);
 }
 
 button::after {
@@ -449,7 +440,7 @@ button::after {
     left: 0;
     bottom: -5px;
     border-bottom: solid var(--styles) 1px;
-    transition: 0.3s ease-in-out;
+    transition: 0.6s cubic-bezier(0.85, 0, 0.15, 1);
 }
   
 button a:hover{
@@ -458,7 +449,7 @@ button a:hover{
 }
   
 button:hover::after{
-    width: 75%;
+    width: 72%;
 }
   
 button svg{
@@ -467,6 +458,7 @@ button svg{
     position: relative;
     margin: 0 5px -3.7px;
     width: 15px;
+    transition: 0.6s cubic-bezier(0.85, 0, 0.15, 1);
 }
   
 button:hover svg{
@@ -475,8 +467,8 @@ button:hover svg{
 
 .section-1 .pfp-card{
     position: relative;
-    width: 430px;
-    height: 500px;
+    width: 500px;
+    height: 650px;
     z-index: 1;
     box-shadow: 0px 0px 50px 7px rgba(0,0,0,0.76);
     -webkit-box-shadow: 0px 0px 50px 7px rgba(0,0,0,0.76);
@@ -509,6 +501,7 @@ button:hover svg{
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
     gap: 10px;
     opacity: 0;
     transition: 0.3s ease-in-out;
@@ -547,28 +540,27 @@ i{
     justify-content: center;
     height: auto;
     background-color: var(--bg);
-    padding: 100px 0 150px;
+    padding: 0 0 150px;
     position: relative;
    /* background: rgb(0,0,0);
     background: linear-gradi    ent(350deg, var(--p) 70%, var(--styles3) 70%);*/
 }
 
 .section-2 .grid-label{
-    border-top: solid var(--card-bg) 1px;
-    padding: 70px 0 30px;
+    padding: 0 0 30px;
     width: 1142px;
     position: relative;
 }
 
 .section-2-svg-1:nth-child(1){
     position: absolute;
-    top: 200px;
+    top: 130px;
     opacity: 0.3;
 }
 
 .section-2-svg-1:nth-child(2){
     position: absolute;
-    top: 370px;
+    top: 300px;
     opacity: 0.3;
 }
 
@@ -719,9 +711,12 @@ i{
 }
 
 .section-3{
+    background-image: url(image/Desktop\ -\ 10.png);
+    background-size: cover;
+    background-repeat: no-repeat;
     height: auto;
     display: flex;
-    padding: 0 0 200px;
+    padding: 200px 0 250px;
     align-items: center;
     flex-direction: column;
     justify-content: center;
@@ -731,28 +726,21 @@ i{
 
 .section-3-svg-1{
     position: absolute;
-    top: 200px;
-    opacity: 0.3;
+    left: 10%;
+    top: 10%;
+    animation: rtate 10s ease-in-out infinite;
 }
 
 .section-3-svg-2{
     position: absolute;
     right: 10%;
-    top: 15%;
-    animation: rtate 10s ease-in-out infinite;
-}
-
-.section-3-svg-3{
-    position: absolute;
-    left: 10%;
     bottom: 15%;
     animation: rtate 10s ease-in-out reverse infinite;
 }
 
 .serv-card-label{
+    margin-bottom: 50px;
     width: 1142px;
-    border-top: solid var(--card-bg) 1px;
-    padding: 100px 0;
     position: relative;
 }
 
@@ -772,27 +760,26 @@ i{
     grid-row: span 2;
     display: flex;
     flex-direction: column;
-    align-items: center;
     position: relative;
+    padding: 20px;
+}
+
+.serv-card:nth-child(2){
+    grid-row: span 4;
+    margin-top: 240px;
 }
 
 .serv-card h4{
     margin: 0 0 40px;
 }
 
-.card-desc{
-    margin: 0 auto;
-    width: 80%;
-    height: auto;
-    padding: 20px;
-}
-
-.card-desc button{
+.serv-card button{
     position: absolute;
-    bottom: 20px;
+    bottom: 0;
+    left: 20px;
 }
 
-.card-desc h4::before,
+.serv-card h4::before,
 .serv-card-label h2::before{
     content: "";
     border-left: solid var(--styles) 1px;
