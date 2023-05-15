@@ -1,6 +1,23 @@
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach((entry) => {
+    console.log(entry)
+    if (entry.isIntersecting) {
+      entry.target.classList.add('show','show2');
+      } //else {
+    //    entry.target.classList.remove('show','fade');
+    //  }
+  })
+});
 
+const hiddenElements = document.querySelectorAll('.hidden')
+const hiddenElement = document.querySelectorAll('.hidden2')
+
+ hiddenElements.forEach((el) => observer.observe(el));
+ hiddenElement.forEach((el) => observer.observe(el));
+
+ 
 const lenis = new Lenis({
-  duration: 1.5,
+  duration: 1,
   easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t))
 });
 
@@ -11,22 +28,7 @@ function raf(time) {
 
 requestAnimationFrame(raf);
 
-const observer = new IntersectionObserver((entries) => {
-  entries.forEach((entry) => {
-    console.log(entry)
-    if (entry.isIntersecting) {
-      entry.target.classList.add('show','fade');
-      } //else {
-    //    entry.target.classList.remove('show','fade');
-    //  }
-  })
-});
-
-const hiddenElements = document.querySelectorAll('.hidden')
-const hiddenElement = document.querySelectorAll('.Hfade')
-
- hiddenElements.forEach((el) => observer.observe(el));
- hiddenElement.forEach((el) => observer.observe(el));
+Splitting();
 
 if (window.matchMedia("(max-width: 430px)").matches) {
   const allTriggers = ScrollTrigger.getAll();
@@ -130,26 +132,16 @@ if (window.matchMedia("(max-width: 430px)").matches) {
   });
   
   gsap.to(".section-1-svg-3", {
-    y: -100,
+    y: -50,
     scrollTrigger: {
       trigger: ".section-1",
-      start: "top top",
+      start: "top center",
       end: "bottom center",
       scrub: 0.5,
     }, 
   });
     
   gsap.to(".section-2-svg-1:nth-child(1)", {
-    xPercent: -5,
-    scrollTrigger: {
-      trigger: ".section-2",
-      start: "top bottom",
-      end: "bottom top",
-      scrub: 0.5,
-    }, 
-  });
-    
-  gsap.to(".section-2-svg-1:nth-child(2)", {
     xPercent: 5,
     scrollTrigger: {
       trigger: ".section-2",
@@ -159,34 +151,54 @@ if (window.matchMedia("(max-width: 430px)").matches) {
     }, 
   });
     
-  gsap.to(".flex-con-right-con", {
-    y: -30,
+  gsap.to(".section-2-svg-1:nth-child(2)", {
+    xPercent: -5,
     scrollTrigger: {
       trigger: ".section-2",
-      start: "center center",
+      start: "top bottom",
       end: "bottom top",
       scrub: 0.5,
     }, 
   });
   
   gsap.from(".con-container", {
-    y: -140,
+    y: -120,
     scrollTrigger: {
       trigger: "footer",
       start: "top bottom",
       end: "bottom bottom",
-      scrub: 0.5,
+      scrub: true,
     }, 
   });
   
-  gsap.to(".about-svg-1", {
-    y: 30,
+  gsap.to(".about-hero-section", {
+    backgroundImage: 'none',
+    backgroundColor: "#eeeeee",
     scrollTrigger: {
-      trigger: ".about-page-hero",
-      start: "top top",
-      end: "bottom center",
-      scrub: 1,
+      trigger: ".about-hero-section",
+      start: "5% top",
+      end: "20% top",
+      scrub: true,
     }, 
   });
-    
+  
+  gsap.to(".about-hero-section h1", {
+    color: "black",
+    scrollTrigger: {
+      trigger: ".about-hero-section",
+      start: "top top",
+      end: "20% top",
+      scrub: true,
+    }, 
+  });
+  
+  gsap.from(".img-container img", {
+    width: 600,
+    scrollTrigger: {
+      trigger: ".about-section-1",
+      start: "top bottom",
+      end: "center top",
+      scrub: true,
+    }, 
+  });
 }
