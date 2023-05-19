@@ -30,6 +30,25 @@ requestAnimationFrame(raf);
 
 Splitting();
 
+function triggerAnimationHome() {
+  var element = document.getElementById("outro-anim");
+
+  element.classList.add("animate");
+  setTimeout(function() {
+    window.location.href = "index.html";
+  }, 1000);
+}
+
+function triggerAnimationAbout() {
+  var element = document.getElementById("outro-anim");
+
+  element.classList.add("animate");
+  setTimeout(function() {
+    window.location.href = "about.html";
+  }, 1000);
+}
+
+
 if (window.matchMedia("(max-width: 430px)").matches) {
   const allTriggers = ScrollTrigger.getAll();
   allTriggers.forEach(trigger => {
@@ -37,6 +56,20 @@ if (window.matchMedia("(max-width: 430px)").matches) {
   });
 }else{
   gsap.registerPlugin(ScrollTrigger);
+
+  const showAnim = gsap.from('header', { 
+    yPercent: -100,
+    paused: true,
+    duration: 0.3,
+  }).progress(1);
+  
+  ScrollTrigger.create({
+    start: "top top",
+    end: 99999,
+    onUpdate: (self) => {
+      self.direction === -1 ? showAnim.play() : showAnim.reverse()
+    }
+  });
   
   gsap.from(".introduction", {
     opacity: 0,
@@ -49,7 +82,7 @@ if (window.matchMedia("(max-width: 430px)").matches) {
     }, 
   });
   
-  gsap.to(".quote_container", {
+  gsap.to(".quote-container", {
     y: 50,
     scrollTrigger: {
       trigger: ".introduction",
@@ -81,7 +114,7 @@ if (window.matchMedia("(max-width: 430px)").matches) {
   });
   
   gsap.to(".bg-anim", {
-    y: -30,
+    y: -50,
     scrollTrigger: {
       trigger: ".introduction",
       start: "top top",
@@ -132,7 +165,7 @@ if (window.matchMedia("(max-width: 430px)").matches) {
   });
   
   gsap.to(".section-1-svg-3", {
-    y: -50,
+    y: -80,
     scrollTrigger: {
       trigger: ".section-1",
       start: "top center",
@@ -171,26 +204,25 @@ if (window.matchMedia("(max-width: 430px)").matches) {
     }, 
   });
   
-  gsap.to(".about-hero-section", {
-    backgroundImage: 'none',
-    backgroundColor: "#eeeeee",
-    scrollTrigger: {
-      trigger: ".about-hero-section",
-      start: "5% top",
-      end: "20% top",
-      scrub: true,
-    }, 
-  });
+  // gsap.to(".about-section-1", {
+  //   backgroundColor: "#eeeeee",
+  //   scrollTrigger: {
+  //     trigger: ".about-section-1",
+  //     start: "10% top",
+  //     end: "20% top",
+  //     scrub: true,
+  //   }, 
+  // });
   
-  gsap.to(".about-hero-section h1", {
-    color: "black",
-    scrollTrigger: {
-      trigger: ".about-hero-section",
-      start: "top top",
-      end: "20% top",
-      scrub: true,
-    }, 
-  });
+  // gsap.to(".section-content p", {
+  //   color: "black",
+  //   scrollTrigger: {
+  //     trigger: ".about-section-1",
+  //     start: "10% top",
+  //     end: "15% top",
+  //     scrub: true,
+  //   }, 
+  // });
   
   gsap.from(".img-container img", {
     width: 600,

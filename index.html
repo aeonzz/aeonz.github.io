@@ -18,8 +18,9 @@
 <body>
     <div class="wrapper">
         <header>
+            <div class="outro" id="outro-anim"></div>
             <div class="header-con">
-                <a href="index.html" class="logo">
+                <a onclick="triggerAnimationHome()" class="logo">
                     <svg width="40" height="36" viewBox="0 0 50 36" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path fill-rule="evenodd" clip-rule="evenodd" d="M11.2739 30.8154L29.0652 0H30.5136H30.5443L32.0059 0.00634766L50 31.1177V33.1484V35.6494H47.0735L30.4559 6.65479L13.8973 35.335V35.3472H3.05176e-05V30.8154H11.2739Z" fill="#EFEFEF"/>
                         <path d="M-2.7418e-05 30.9671L-2.73962e-05 30.8156L17.8704 -8.96693e-05L23.1117 -7.97118e-05L3.92456 33.2329L-2.7418e-05 30.9671Z" fill="#EFEFEF"/>
@@ -29,8 +30,7 @@
                 </a>   
                 <nav>
                     <ul> 
-                        <li><a href="about.html" class="link">About</a></li>
-                        <li><a href="services.html" class="link">Services</a></li>
+                        <li><a class="link" onclick="triggerAnimationAbout()">About</a></li>
                     </ul>
                 </nav>
             </div> 
@@ -58,20 +58,20 @@
             </svg>
             <div class="hero-content">
                 <h1 data-splitting>Christian<br>Caneos</h1>
-                <p>UI/UX Designer / Front End Developer</p>
+                <p data-splitting="">UI/UX Designer / Front End Developer</p>
             </div>
         </div>
         <section class="introduction" id="intro">
-            <svg width="250" viewBox="0 0 400 389" fill="none" xmlns="http://www.w3.org/2000/svg" class="q-1">
+            <svg width="200" viewBox="0 0 400 389" fill="none" xmlns="http://www.w3.org/2000/svg" class="q-1">
                 <path d="M150.446 9.72355L155.562 4.41132L150.981 0L145.944 3.88261L150.446 9.72355ZM190.271 48.0727L195.92 52.8138L200.347 47.538L195.386 42.7605L190.271 48.0727ZM144.547 260.468L138.788 265.075L138.846 265.147L138.906 265.218L144.547 260.468ZM144.547 362.24L139.896 356.517L139.805 356.59L139.717 356.667L144.547 362.24ZM30.9743 353.391L25.2155 357.998L25.2734 358.07L25.3332 358.141L30.9743 353.391ZM42.774 135.096L36.233 131.688L36.2059 131.742L42.774 135.096ZM145.331 15.0358L185.155 53.3849L195.386 42.7605L155.562 4.41132L145.331 15.0358ZM184.621 43.3316C137.793 99.1279 113.572 152.873 113.572 204.419H128.322C128.322 157.634 150.317 107.149 195.92 52.8138L184.621 43.3316ZM113.572 204.419C113.572 224.375 122.441 244.641 138.788 265.075L150.306 255.861C135.186 236.961 128.322 219.863 128.322 204.419H113.572ZM138.906 265.218C153.868 282.986 160.771 300.046 160.771 316.516H175.521C175.521 295.621 166.691 275.315 150.188 255.718L138.906 265.218ZM160.771 316.516C160.771 331.656 154.187 344.905 139.896 356.517L149.197 367.964C166.372 354.009 175.521 336.776 175.521 316.516H160.771ZM139.717 356.667C126.517 368.107 109.638 374.04 88.4979 374.04V388.79C112.59 388.79 133.077 381.94 149.376 367.813L139.717 356.667ZM88.4979 374.04C68.2474 374.04 51.0744 365.81 36.6153 348.64L25.3332 358.141C42.3401 378.337 63.5161 388.79 88.4979 388.79V374.04ZM36.733 348.783C22.4908 330.981 14.7496 303.437 14.7496 264.893H0C0 305.013 7.99183 336.468 25.2155 357.998L36.733 348.783ZM14.7496 264.893C14.7496 226.029 26.1253 183.916 49.3421 138.45L36.2059 131.742C12.2238 178.707 0 223.125 0 264.893H14.7496ZM49.3148 138.502C73.3465 92.3615 108.496 51.3719 154.949 15.5645L145.944 3.88261C97.9989 40.8401 61.3667 83.4313 36.233 131.688L49.3148 138.502Z" fill="white" fill-opacity="0.5"/>
                 <path d="M350.099 9.72355L355.214 4.41132L350.633 0L345.596 3.88261L350.099 9.72355ZM389.923 48.0727L395.572 52.8138L400 47.538L395.038 42.7605L389.923 48.0727ZM344.199 260.468L338.44 265.075L338.498 265.147L338.558 265.218L344.199 260.468ZM344.199 362.24L339.548 356.517L339.458 356.59L339.369 356.667L344.199 362.24ZM230.627 353.391L224.868 357.998L224.926 358.07L224.986 358.141L230.627 353.391ZM242.426 135.096L235.885 131.688L235.858 131.742L242.426 135.096ZM344.984 15.0358L384.808 53.3849L395.038 42.7605L355.214 4.41132L344.984 15.0358ZM384.274 43.3316C337.445 99.1279 313.225 152.873 313.225 204.419H327.974C327.974 157.634 349.97 107.149 395.572 52.8138L384.274 43.3316ZM313.225 204.419C313.225 224.375 322.094 244.641 338.44 265.075L349.958 255.861C334.838 236.961 327.974 219.863 327.974 204.419H313.225ZM338.558 265.218C353.52 282.986 360.424 300.046 360.424 316.516H375.173C375.173 295.621 366.343 275.315 349.84 255.718L338.558 265.218ZM360.424 316.516C360.424 331.656 353.839 344.905 339.548 356.517L348.849 367.964C366.025 354.009 375.173 336.776 375.173 316.516H360.424ZM339.369 356.667C326.17 368.107 309.29 374.04 288.15 374.04V388.79C312.242 388.79 332.729 381.94 349.029 367.813L339.369 356.667ZM288.15 374.04C267.9 374.04 250.727 365.81 236.268 348.64L224.986 358.141C241.992 378.337 263.168 388.79 288.15 388.79V374.04ZM236.385 348.783C222.143 330.981 214.402 303.437 214.402 264.893H199.652C199.652 305.013 207.644 336.468 224.868 357.998L236.385 348.783ZM214.402 264.893C214.402 226.029 225.778 183.916 248.994 138.45L235.858 131.742C211.876 178.707 199.652 223.125 199.652 264.893H214.402ZM248.967 138.502C272.999 92.3615 308.149 51.3719 354.601 15.5645L345.596 3.88261C297.651 40.8401 261.019 83.4313 235.885 131.688L248.967 138.502Z" fill="white" fill-opacity="0.5"/>
             </svg>
             <div class="bg-anim">
-                <div class="quote_container">
+                <div class="quote-container">
                     <h1><q>Design is not just what it looks like and feels like. Design is how it works.</q></h1>
                 </div>
             </div>
-            <svg width="250" viewBox="0 0 201 195" fill="none" xmlns="http://www.w3.org/2000/svg" class="q-2">
+            <svg width="200" viewBox="0 0 201 195" fill="none" xmlns="http://www.w3.org/2000/svg" class="q-2">
                 <path d="M125.128 4.86178L122.571 2.20566L124.861 0L127.38 1.94131L125.128 4.86178ZM105.216 24.0363L102.392 26.4069L100.178 23.769L102.659 21.3802L105.216 24.0363ZM128.078 130.234L130.958 132.537L130.929 132.574L130.899 132.609L128.078 130.234ZM128.078 181.12L130.404 178.258L130.449 178.295L130.493 178.334L128.078 181.12ZM184.864 176.695L187.744 178.999L187.715 179.035L187.685 179.07L184.864 176.695ZM178.965 67.5478L182.235 65.8442L182.249 65.8708L178.965 67.5478ZM127.686 7.51788L107.774 26.6925L102.659 21.3802L122.571 2.20566L127.686 7.51788ZM108.041 21.6658C131.455 49.5639 143.565 76.4363 143.565 102.21H136.191C136.191 78.8169 125.193 53.5744 102.392 26.4069L108.041 21.6658ZM143.565 102.21C143.565 112.187 139.131 122.321 130.958 132.537L125.199 127.93C132.759 118.481 136.191 109.931 136.191 102.21H143.565ZM130.899 132.609C123.418 141.493 119.966 150.023 119.966 158.258H112.591C112.591 147.81 117.006 137.658 125.258 127.859L130.899 132.609ZM119.966 158.258C119.966 165.828 123.258 172.453 130.404 178.258L125.753 183.982C117.165 177.005 112.591 168.388 112.591 158.258H119.966ZM130.493 178.334C137.093 184.054 145.533 187.02 156.103 187.02V194.395C144.057 194.395 133.813 190.97 125.663 183.907L130.493 178.334ZM156.103 187.02C166.228 187.02 174.814 182.905 182.044 174.32L187.685 179.07C179.182 189.168 168.593 194.395 156.103 194.395V187.02ZM181.985 174.392C189.106 165.49 192.977 151.719 192.977 132.446H200.352C200.352 152.507 196.356 168.234 187.744 178.999L181.985 174.392ZM192.977 132.446C192.977 113.014 187.289 91.9578 175.681 69.2249L182.249 65.8708C194.24 89.3533 200.352 111.562 200.352 132.446H192.977ZM175.694 69.251C163.678 46.1807 146.103 25.686 122.877 7.78223L127.38 1.94131C151.352 20.4201 169.668 41.7156 182.235 65.8442L175.694 69.251Z" fill="white" fill-opacity="0.5"/>
                 <path d="M25.3022 4.86178L22.7446 2.20566L25.0348 0L27.5533 1.94131L25.3022 4.86178ZM5.39013 24.0363L2.56558 26.4069L0.351652 23.769L2.83254 21.3802L5.39013 24.0363ZM28.2521 130.234L31.1316 132.537L31.1025 132.574L31.0726 132.609L28.2521 130.234ZM28.2521 181.12L30.5774 178.258L30.6227 178.295L30.667 178.334L28.2521 181.12ZM85.0383 176.695L87.9176 178.999L87.8887 179.035L87.8588 179.07L85.0383 176.695ZM79.1384 67.5478L82.4089 65.8442L82.4224 65.8708L79.1384 67.5478ZM27.8598 7.51788L7.94773 26.6925L2.83254 21.3802L22.7446 2.20566L27.8598 7.51788ZM8.21469 21.6658C31.629 49.5639 43.7392 76.4363 43.7392 102.21H36.3644C36.3644 78.8169 25.3667 53.5744 2.56558 26.4069L8.21469 21.6658ZM43.7392 102.21C43.7392 112.187 39.3047 122.321 31.1316 132.537L25.3726 127.93C32.9325 118.481 36.3644 109.931 36.3644 102.21H43.7392ZM31.0726 132.609C23.5916 141.493 20.1398 150.023 20.1398 158.258H12.765C12.765 147.81 17.1799 137.658 25.4316 127.859L31.0726 132.609ZM20.1398 158.258C20.1398 165.828 23.4319 172.453 30.5774 178.258L25.9268 183.982C17.3392 177.005 12.765 168.388 12.765 158.258H20.1398ZM30.667 178.334C37.2667 184.054 45.7065 187.02 56.2764 187.02V194.395C44.2304 194.395 33.9871 190.97 25.8372 183.907L30.667 178.334ZM56.2764 187.02C66.4017 187.02 74.9882 182.905 82.2177 174.32L87.8588 179.07C79.3554 189.168 68.7673 194.395 56.2764 194.395V187.02ZM82.1589 174.392C89.28 165.49 93.1506 151.719 93.1506 132.446H100.525C100.525 152.507 96.5295 168.234 87.9176 178.999L82.1589 174.392ZM93.1506 132.446C93.1506 113.014 87.4627 91.9578 75.8544 69.2249L82.4224 65.8708C94.4135 89.3533 100.525 111.562 100.525 132.446H93.1506ZM75.868 69.251C63.8521 46.1807 46.2773 25.686 23.051 7.78223L27.5533 1.94131C51.5259 20.4201 69.8421 41.7156 82.4089 65.8442L75.868 69.251Z" fill="white" fill-opacity="0.5"/>
             </svg>
@@ -109,7 +109,7 @@
                     </div>
                     <p>As an aspiring front-end developer and web designer, I'm excited to learn and grow my skills in this dynamic field. I'm dedicated to creating/designing visually appealing and user-friendly websites with a focus on UI/UX, providing an intuitive browsing experience.<br><br> With a solid foundation in HTML, CSS, and design principles, I'm constantly seeking to expand my knowledge and stay current with the latest trends and technologies in front-end development and web design.</p>
                     <button>
-                        <a href="about.html">
+                        <a onclick="triggerAnimationAbout()">
                             Learn more
                             <svg stroke-width="2" stroke="currentColor" viewBox="0 0 24 24" fill="none" class="h-6 w-6" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M14 5l7 7m0 0l-7 7m7-7H3" stroke-linejoin="round" stroke-linecap="round"></path>
@@ -156,7 +156,7 @@
                 <div class="flex-item">
                     <div class="flex-con-left-con">
                         <div class="left-con">
-                            <h3 data-splitting class="hidden">Shoe E-Commerse landing Page.</h3>
+                            <h3>Shoe E-Commerse landing Page.</h3>
                             <p>Web Design</p>
                         </div>
                     </div>
@@ -214,7 +214,7 @@
                 <div class="flex-item">
                     <div class="order flex-con-left-con">
                         <div class="left-con">
-                            <h3 data-splitting class="hidden">Headset E-Commerse landing Page.</h3>
+                            <h3>Headset E-Commerse landing Page.</h3>
                             <p>Web Design</p>
                         </div>
                     </div>
@@ -283,15 +283,15 @@
                 <p>I offer customized web development, web design, and creative design solutions<br> to help individuals and small businesses establish their online presence.</p>
             </div>
             <div class="services-container">
-                <div class="hidden serv-card" style="transition-delay: 200ms;">
-                    <a href="services.html" class="mob-link">
+                <div class="serv-card">
+                    <a onclick="triggerAnimationAbout()" class="mob-link">
                         <h4 data-splitting class="hidden">Web design.</h4>
                         <p>With my custom web design services, I can help elevate your online presence and provide you with a unique website tailored to your specific needs.</p>
                         <svg width="25" viewBox="0 0 56 56" fill="none" class="mob-arrow">
                             <path d="M20.7083 6.76661L40.3666 26.3666C40.6 26.5999 40.7649 26.8527 40.8613 27.1249C40.9593 27.3972 41.0083 27.6888 41.0083 27.9999C41.0083 28.3111 40.9593 28.6027 40.8613 28.8749C40.7649 29.1472 40.6 29.3999 40.3666 29.6333L20.7083 49.2916C20.1639 49.8361 19.4833 50.1083 18.6666 50.1083C17.85 50.1083 17.15 49.8166 16.5666 49.2333C15.9833 48.6499 15.6916 47.9694 15.6916 47.1916C15.6916 46.4138 15.9833 45.7333 16.5666 45.1499L33.7166 27.9999L16.5666 10.8499C16.0222 10.3055 15.75 9.63506 15.75 8.83861C15.75 8.04061 16.0416 7.34994 16.625 6.76661C17.2083 6.18328 17.8889 5.89161 18.6666 5.89161C19.4444 5.89161 20.125 6.18328 20.7083 6.76661Z" fill="#EEEEEE"/>
                         </svg>
                         <button>
-                            <a href="about.html">
+                            <a onclick="triggerAnimationAbout()">
                                 Learn more
                                 <svg stroke-width="2" stroke="currentColor" viewBox="0 0 24 24" fill="none" class="h-6 w-6" xmlns="http://www.w3.org/2000/svg">
                                     <path d="M14 5l7 7m0 0l-7 7m7-7H3" stroke-linejoin="round" stroke-linecap="round"></path>
@@ -300,15 +300,15 @@
                         </button>
                     </a>
                 </div>
-                <div class="hidden serv-card" style="transition-delay: 400ms;">
-                    <a href="about.html" class="mob-link">
+                <div class="serv-card">
+                    <a onclick="triggerAnimationAbout()" class="mob-link">
                         <h4 data-splitting class="hidden">Creative design.</h4>
                         <p>Stand out from the crowd with my creative design services, tailored to help you achieve your branding, marketing, or communication goals.</p>
                         <svg width="25" viewBox="0 0 56 56" fill="none" class="mob-arrow">
                             <path d="M20.7083 6.76661L40.3666 26.3666C40.6 26.5999 40.7649 26.8527 40.8613 27.1249C40.9593 27.3972 41.0083 27.6888 41.0083 27.9999C41.0083 28.3111 40.9593 28.6027 40.8613 28.8749C40.7649 29.1472 40.6 29.3999 40.3666 29.6333L20.7083 49.2916C20.1639 49.8361 19.4833 50.1083 18.6666 50.1083C17.85 50.1083 17.15 49.8166 16.5666 49.2333C15.9833 48.6499 15.6916 47.9694 15.6916 47.1916C15.6916 46.4138 15.9833 45.7333 16.5666 45.1499L33.7166 27.9999L16.5666 10.8499C16.0222 10.3055 15.75 9.63506 15.75 8.83861C15.75 8.04061 16.0416 7.34994 16.625 6.76661C17.2083 6.18328 17.8889 5.89161 18.6666 5.89161C19.4444 5.89161 20.125 6.18328 20.7083 6.76661Z" fill="#EEEEEE"/>
                         </svg>
                         <button>
-                            <a href="about.html">
+                            <a onclick="triggerAnimationAbout()">
                                 Learn more
                                 <svg stroke-width="2" stroke="currentColor" viewBox="0 0 24 24" fill="none" class="h-6 w-6" xmlns="http://www.w3.org/2000/svg">
                                     <path d="M14 5l7 7m0 0l-7 7m7-7H3" stroke-linejoin="round" stroke-linecap="round"></path>
@@ -317,15 +317,15 @@
                         </button>
                     </a>
                 </div>
-                <div class="hidden serv-card" style="transition-delay: 600ms;">
-                    <a href="services.html" class="mob-link">
+                <div class="serv-card">
+                    <a onclick="triggerAnimationAbout()" class="mob-link">
                         <h4 data-splitting class="hidden">Web development.</h4>
                         <p>I design websites that are both responsive and accessible, providing optimal viewing experiences across different devices.</p>
                         <svg width="25" viewBox="0 0 56 56" fill="none" class="mob-arrow">
                             <path d="M20.7083 6.76661L40.3666 26.3666C40.6 26.5999 40.7649 26.8527 40.8613 27.1249C40.9593 27.3972 41.0083 27.6888 41.0083 27.9999C41.0083 28.3111 40.9593 28.6027 40.8613 28.8749C40.7649 29.1472 40.6 29.3999 40.3666 29.6333L20.7083 49.2916C20.1639 49.8361 19.4833 50.1083 18.6666 50.1083C17.85 50.1083 17.15 49.8166 16.5666 49.2333C15.9833 48.6499 15.6916 47.9694 15.6916 47.1916C15.6916 46.4138 15.9833 45.7333 16.5666 45.1499L33.7166 27.9999L16.5666 10.8499C16.0222 10.3055 15.75 9.63506 15.75 8.83861C15.75 8.04061 16.0416 7.34994 16.625 6.76661C17.2083 6.18328 17.8889 5.89161 18.6666 5.89161C19.4444 5.89161 20.125 6.18328 20.7083 6.76661Z" fill="#EEEEEE"/>
                         </svg>
                         <button>
-                            <a href="services.html">
+                            <a onclick="triggerAnimationAbout()">
                                 Learn more
                                 <svg stroke-width="2" stroke="currentColor" viewBox="0 0 24 24" fill="none" class="h-6 w-6" xmlns="http://www.w3.org/2000/svg">
                                     <path d="M14 5l7 7m0 0l-7 7m7-7H3" stroke-linejoin="round" stroke-linecap="round"></path>
@@ -361,9 +361,8 @@
                 <div class="right-col">
                     <nav>
                         <ul>
-                            <li><a href="index.html">Portfolio</a></li>
-                            <li><a href="about.html">About</a></li>
-                            <li><a href="services.html">Services</a></li>
+                            <li><a onclick="triggerAnimationHome()">Portfolio</a></li>
+                            <li><a onclick="triggerAnimationAbout()">About</a></li>
                         </ul>
                     </nav>
                     <p>Copyright © 2022 Aeonz</p>

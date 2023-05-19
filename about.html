@@ -18,8 +18,9 @@
 <body>
     <div class="wrapper">
         <header>
+            <div class="outro" id="outro-anim"></div>
             <div class="header-con">
-                <a href="index.html" class="logo">
+                <a onclick="triggerAnimationHome()" class="logo">
                     <svg width="40" height="36" viewBox="0 0 50 36" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path fill-rule="evenodd" clip-rule="evenodd" d="M11.2739 30.8154L29.0652 0H30.5136H30.5443L32.0059 0.00634766L50 31.1177V33.1484V35.6494H47.0735L30.4559 6.65479L13.8973 35.335V35.3472H3.05176e-05V30.8154H11.2739Z" fill="#EFEFEF"/>
                         <path d="M-2.7418e-05 30.9671L-2.73962e-05 30.8156L17.8704 -8.96693e-05L23.1117 -7.97118e-05L3.92456 33.2329L-2.7418e-05 30.9671Z" fill="#EFEFEF"/>
@@ -29,28 +30,27 @@
                 </a>   
                 <nav>
                     <ul> 
-                        <li><a href="about.html" class="link page-indicator">About</a></li>
-                        <li><a href="services.html" class="link">Services</a></li>
+                        <li><a class="link" onclick="triggerAnimationAbout()">About</a></li>>
                     </ul>
                 </nav>
             </div> 
         </header>
         <section class="about-hero-section">
             <div class="intro-anim">
-                <h1 data-splitting>WHAT'S UP</h1>
+                <h1 data-splitting>WHAT'S UP!!</h1>
             </div>
-            <svg width="54" height="54" viewBox="0 0 54 54" fill="none" class="about-hero-section-svg-1">
-                <path d="M26.0064 16.5538L10.8669 1.41421L1.41423 10.8667L16.5545 26.0062L17.2616 26.7133L16.5545 27.4204L1.4142 42.5618L10.8668 52.0142L26.0064 36.873L26.7135 36.1657L27.4207 36.873L42.5608 52.0143L52.0141 42.5618L36.8731 27.4205L36.166 26.7133L36.8731 26.0062L52.014 10.8667L42.5607 1.41418L27.4206 16.5538L26.7135 17.2608L26.0064 16.5538Z" stroke="black" stroke-width="2"/>
-            </svg>     
-            <svg width="54" height="54" viewBox="0 0 54 54" fill="none" class="about-hero-section-svg-2">
-                <path d="M26.0064 16.5538L10.8669 1.41421L1.41423 10.8667L16.5545 26.0062L17.2616 26.7133L16.5545 27.4204L1.4142 42.5618L10.8668 52.0142L26.0064 36.873L26.7135 36.1657L27.4207 36.873L42.5608 52.0143L52.0141 42.5618L36.8731 27.4205L36.166 26.7133L36.8731 26.0062L52.014 10.8667L42.5607 1.41418L27.4206 16.5538L26.7135 17.2608L26.0064 16.5538Z" stroke="black" stroke-width="2"/>
-            </svg> 
             <div class="about-hero-content">
-                <h1 data-splitting>Bringing your vision to life through innovative design</h1>
+                <h1 data-splitting>Bringing your vision to life through innovative design and code</h1>
             </div>
-            <h4 data-splitting class="hidden2">Let's bring your digital projects to life together with fresh ideas and quality commitment.</h4>
         </section>
         <section class="about-section-1">
+            <svg width="54" height="54" viewBox="0 0 54 54" fill="none" class="about-section-1-svg-1">
+                <path d="M26.0064 16.5538L10.8669 1.41421L1.41423 10.8667L16.5545 26.0062L17.2616 26.7133L16.5545 27.4204L1.4142 42.5618L10.8668 52.0142L26.0064 36.873L26.7135 36.1657L27.4207 36.873L42.5608 52.0143L52.0141 42.5618L36.8731 27.4205L36.166 26.7133L36.8731 26.0062L52.014 10.8667L42.5607 1.41418L27.4206 16.5538L26.7135 17.2608L26.0064 16.5538Z" stroke="white" stroke-width="2"/>
+            </svg>     
+            <svg width="54" height="54" viewBox="0 0 54 54" fill="none" class="about-section-1-svg-2">
+                <path d="M26.0064 16.5538L10.8669 1.41421L1.41423 10.8667L16.5545 26.0062L17.2616 26.7133L16.5545 27.4204L1.4142 42.5618L10.8668 52.0142L26.0064 36.873L26.7135 36.1657L27.4207 36.873L42.5608 52.0143L52.0141 42.5618L36.8731 27.4205L36.166 26.7133L36.8731 26.0062L52.014 10.8667L42.5607 1.41418L27.4206 16.5538L26.7135 17.2608L26.0064 16.5538Z" stroke="white" stroke-width="2"/>
+            </svg> 
+            <h4 data-splitting class="hidden2">Let's bring your digital projects to life together with fresh ideas and quality commitment.</h4>
             <div class="section-content">
                 <div class="img-container">
                     <img src="image/Frame 8.png" alt="myPicture">
@@ -63,9 +63,25 @@
             </div>
         </section>
         <section class="about-section-2">
-
+            <div class="serv-card-label">
+                <h2 data-splitting class="hidden">What i can do for you</h2>
+            </div>
+            <div class="services-container">
+                <div class="serv-card">
+                    <h4 data-splitting class="hidden">Web design.</h4>
+                    <p>My web design service offers custom, visually appealing websites that prioritize user experience. As a newcomer to the field, I collaborate closely with clients to create modern, user-friendly designs that align with their business goals and leave a lasting impression on visitors.</p>
+                </div>
+                <div class="serv-card">
+                    <h4 data-splitting class="hidden">Creative design.</h4>
+                    <p>As an amateur, if you're looking for visually stunning designs that capture your brand's essence, my creative design services are here to help. I offer a range of design solutions, including brand identity, print design, web design, UI/UX design, and packaging design, tailored to your unique needs to help you stand out from the crowd. Let's collaborate and bring your vision to life!</p>
+                </div>
+                <div class="serv-card">
+                        <h4 data-splitting class="hidden">Web development.</h4>
+                        <p>As a beginner in web development, my service offers custom and responsive websites that prioritize user experience. I collaborate closely with clients to ensure their website meets their unique needs and aligns with their business goals. From design to deployment, I am dedicated to delivering high-quality websites that leave a lasting impression on visitors.</p>
+                </div>
+            </div>
         </section>
-        <footer class="about-footer">
+        <footer>
             <div class="con-container">
                 <div class="left-col">
                     <h2>Get in Touch</h2>
@@ -90,9 +106,8 @@
                 <div class="right-col">
                     <nav>
                         <ul>
-                            <li><a href="index.html">Portfolio</a></li>
-                            <li><a href="about.html">About</a></li>
-                            <li><a href="services.html">Services</a></li>
+                            <li><a onclick="triggerAnimationHome()">Portfolio</a></li>
+                            <li><a onclick="triggerAnimationAbout()">About</a></li>
                         </ul>
                     </nav>
                     <p>Copyright © 2022 Aeonz</p>
